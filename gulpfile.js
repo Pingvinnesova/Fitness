@@ -21,7 +21,9 @@ gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
     .pipe(plumber())
     .pipe(sourcemap.init())
-    .pipe(sass())
+    .pipe(sass({
+      includePaths: require('node-normalize-scss').includePaths
+    }))
     .pipe(postcss([ autoprefixer() ]))
     .pipe(csso())
     .pipe(rename("style.min.css"))
@@ -104,5 +106,5 @@ gulp.task("clean", function () {
   return del("build");
 });
 
-gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html", "minify"));
+gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html"));
 gulp.task("start", gulp.series("build", "server"));
