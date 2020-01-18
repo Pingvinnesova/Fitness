@@ -47,16 +47,31 @@
     </header>
     <main>
       <section class="gym">
-        <div class="gym__info">
-          <h2>Тренажёрный зал</h2>
-          <p><span class="gym__note">Просторный зал площадью 900 кв/м</span></p>
-          <p><span class="gym__description">
-            Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья. Тренажерный зал оснащен всем необходимым современным оборудованием для всех спортсменов. В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажерами. Также в фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.
-          </span></p>
+        <div class="gym__info-wrapper">
+          <div class="gym__info">
+            <h2>Тренажёрный зал</h2>
+            <p><span class="gym__note">Просторный зал площадью 900 кв/м</span></p>
+            <div class="gym__description">
+              <p>Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья. Тренажерный зал оснащен всем необходимым современным оборудованием для всех спортсменов.</p>
+              <p><span>В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажерами. Также в фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.</span></p>
+            </div>
+          </div>
+          <div class="gym__image">
+            <picture>
+  <!--             <source type="image/webp" media="(max-width: 1199px)" srcset="img/gym-mobile@1x.webp 1x, img/gym-tablet@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 767px)" srcset="img/gym-mobile@1x.webp 1x, img/gym-mobile@2x.webp 2x">
+              <source type="image/webp" srcset="img/gym-desktop@1x.webp 1x, img/gym-desktop@2x.webp 2x"> -->
+              <source media="(max-width: 767px)" srcset="img/gym-mobile@1x.jpg 1x, img/gym-mobile@2x.jpg 2x">
+              <source media="(max-width: 1199px)" srcset="img/gym-tablet@1x.jpg 1x, img/gym-tablet@2x.jpg 2x">
+
+              <img src="img/gym-desktop@1x.jpg" srcset="img/gym-desktop@2x.jpg 2x" alt="Тренажёрный зал">
+            </picture>
+          </div>
         </div>
-        <div class="gym__image"></div>
         <div class="gym__video">
-          <button></button>
+          <button class="gym__play-btn" type="button">
+            <span class="visually-hidden">Воспроизвести видео</span>
+          </button>
         </div>
       </section>
       <section class="membership" id="membership">
