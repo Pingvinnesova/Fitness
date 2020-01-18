@@ -1,11 +1,15 @@
 .promo {
   display: flex;
+  max-width: 1366px;
+  box-sizing: border-box;
+  padding: 0 7.5% 51px 7.5%;
+  margin: 0 auto;
 }
 
 .promo__info {
   display: flex;
   flex-direction: column;
-  padding: 112px 66px 43px 15px;
+  padding: 82px 66px 43px 15px;
 }
 
 .promo__info p {
@@ -28,6 +32,7 @@
   position: relative;
   width: 381px;
   display: flex;
+  margin-bottom: 57px;
 }
 
 .promo__header h1 {
@@ -69,7 +74,6 @@
   font-family: "RobotoCondensedRegular", "Arial", sans-serif;
   text-align: center;
   align-self: flex-end;
-  margin-top: auto;
   border: 4px solid $white;
   padding: 19px 54px;
   cursor: pointer;
@@ -98,11 +102,11 @@
   flex-direction: column;
   align-self: flex-end;
   margin-left: auto;
-  margin-bottom: 41px;
+  margin-bottom: 26px;
 }
 
 .promo__social li {
-  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .promo__social a {
@@ -119,6 +123,12 @@
 }
 
 @media (max-width: $tablet-width) {
+  .promo {
+    width: 768px;
+    box-sizing: border-box;
+    padding: 0 45px 0 45px;
+  }
+
   .promo__social {
     display: none;
   }
@@ -131,6 +141,7 @@
 
   .promo__header {
     width: 325px;
+    margin-bottom: 42px;
   }
 
   .promo__header ul {
@@ -144,7 +155,7 @@
   }
 
   .promo__info {
-    padding: 74px 4% 22px 0;
+    padding: 34px 4% 22px 0;
   }
 
   .promo__button {
@@ -166,6 +177,12 @@
 }
 
 @media (max-width: $mobile-width) {
+  .promo {
+    width: auto;
+    box-sizing: border-box;
+    padding: 0 15px 0 15px;
+  }
+
   .promo__image {
     display: none;
   }
@@ -183,13 +200,14 @@
 
   .promo__header {
     width: auto;
+    margin-bottom: 45px;
   }
 
   .promo__info {
     width: 290px;
     margin: 0 auto;
     box-sizing: border-box;
-    padding: 74px 0 22px 0;
+    padding: 55px 0 22px 0;
   }
 
   .promo__header ul {
@@ -200,6 +218,5 @@
     padding: 19px 31px;
     box-sizing: border-box;
     width: 100%;
-    margin-top: 45px;
   }
 }
