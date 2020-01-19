@@ -4,13 +4,14 @@
   flex-direction: column;
   max-width: 1366px;
   box-sizing: border-box;
-  padding: 120px 7.5% 120px 7.5%;
+  padding: 120px 7.5% 218px 7.5%;
   margin: 0 auto;
 }
 
 .gym__info-wrapper {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 11px;
 }
 
 .gym__info {
@@ -19,13 +20,7 @@
 }
 
 .gym__info h2 {
-  padding: 0;
-  margin: 0;
-  font-family: "BebasNeueRegular", "Arial", cursive;
-  font-size: 49px;
-  line-height: 49px;
-  letter-spacing: 0.03em;
-  color: $dark-blue;
+  @include desktop-header;
   margin-bottom: 10px;
 }
 
@@ -80,7 +75,7 @@
   // align-self: flex-start;
   position: absolute;
   left: 54%;
-  bottom: 9px;
+  bottom: 118px;
   transform: translateX(-54%);
   width: 364px;
   height: 228px;
@@ -119,7 +114,7 @@
   .gym {
     width: 768px;
     box-sizing: border-box;
-    padding: 52px 45px 100px 45px;
+    padding: 55px 45px 169px 45px;
   }
 
   .gym__info-wrapper {
@@ -128,9 +123,9 @@
   }
 
   .gym__info h2 {
-    font-size: 42px;
-    line-height: 42px;
+    @include tablet-header;
     text-align: center;
+    margin-bottom: 9px;
   }
 
   .gym__image img {
@@ -144,18 +139,18 @@
   }
 
   .gym__info {
-    padding: 45px 22px 34px 18px;
+    padding: 45px 22px 34px 21px;
     width: auto;
   }
 
   .gym__info p {
     text-align: center;
-    padding-left: 61px;
-    padding-right: 48px;
+    padding-left: 59px;
+    padding-right: 49px;
   }
 
   .gym__info p:first-of-type {
-    margin-bottom: 36px;
+    margin-bottom: 33px;
     padding: 0;
   }
 
@@ -179,7 +174,7 @@
     width: 266px;
     height: 167px;
     left: 50%;
-    bottom: 21px;
+    bottom: 101px;
     transform: translateX(-50%);
     background-color: $dark-blue;
     background-image: url("../img/video-tablet@1x.jpg");
@@ -209,7 +204,7 @@
     width: auto;
     box-sizing: border-box;
     padding: 0;
-    padding-bottom: 202px;
+    padding-bottom: 261px;
   }
 
   .gym__info {
@@ -218,8 +213,7 @@
 
   .gym__info h2 {
     text-align: left;
-    font-size: 32px;
-    line-height: 32px;
+    @include mobile-header;
     margin-bottom: 8px;
   }
 
@@ -257,7 +251,7 @@
     // margin-left: 0;
     // margin-top: 36px;
     left: 50%;
-    bottom: 0;
+    bottom: 70px;
     transform: translateX(-50%);
     width: 320px;
     height: 167px;
