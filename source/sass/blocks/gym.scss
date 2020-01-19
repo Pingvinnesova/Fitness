@@ -213,6 +213,7 @@
 
   .gym__info h2 {
     text-align: left;
+
     @include mobile-header;
     margin-bottom: 8px;
   }
