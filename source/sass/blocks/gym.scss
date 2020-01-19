@@ -1,12 +1,3 @@
-// .logo {
-//   font-family: "BebasNeueBold", "Arial", cursive;
-//   font-size: 26px;
-//   line-height: 26px;
-//   letter-spacing: 0.02em;
-//   color: $white;
-//   text-transform: uppercase;
-// }
-
 .gym {
   position: relative;
   display: flex;
@@ -41,28 +32,39 @@
 .gym__info p {
   padding: 0;
   margin: 0;
-}
-
-.gym__note {
-  display: block;
-  font-family: "RobotoCondensedRegular", "Arial", sans-serif;
-  font-size: 18px;
-  line-height: 27px;
-  color: $dark-blue;
-  margin-bottom: 39px;
-}
-
-.gym__description {
   font-family: "RobotoCondensedRegular", "Arial", sans-serif;
   font-size: 16px;
   line-height: 24px;
   color: $dark-blue;
+  margin-bottom: 8px;
 }
 
-.gym__description span {
-  display: block;
-  margin-top: 8px;
+.gym__info p:first-of-type {
+  font-size: 18px;
+  line-height: 27px;
+  margin-bottom: 39px;
 }
+
+// .gym__note {
+//   display: block;
+//   font-family: "RobotoCondensedRegular", "Arial", sans-serif;
+//   font-size: 18px;
+//   line-height: 27px;
+//   color: $dark-blue;
+//   margin-bottom: 39px;
+// }
+
+// .gym__description {
+//   font-family: "RobotoCondensedRegular", "Arial", sans-serif;
+//   font-size: 16px;
+//   line-height: 24px;
+//   color: $dark-blue;
+// }
+
+// .gym__description span {
+//   display: block;
+//   margin-top: 8px;
+// }
 
 .gym__image img {
   width: 660px;
@@ -75,12 +77,15 @@
 }
 
 .gym__video {
-  align-self: flex-start;
-  position: relative;
+  // align-self: flex-start;
+  position: absolute;
+  left: 54%;
+  bottom: 9px;
+  transform: translateX(-54%);
   width: 364px;
   height: 228px;
-  margin-top: -113px;
-  margin-left: 438px;
+  // margin-top: -113px;
+  // margin-left: 438px;
   background-image: url("../img/video-desktop@1x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -125,11 +130,6 @@
   .gym__info h2 {
     font-size: 42px;
     line-height: 42px;
-  }
-
-  .gym__info h2,
-  .gym__description,
-  .gym__note {
     text-align: center;
   }
 
@@ -144,29 +144,44 @@
   }
 
   .gym__info {
-    padding: 45px 22px 42px 18px;
+    padding: 45px 22px 34px 18px;
     width: auto;
   }
 
-  .gym__note {
-    margin-bottom: 36px;
-  }
-
-  .gym__description {
+  .gym__info p {
+    text-align: center;
     padding-left: 61px;
     padding-right: 48px;
   }
 
-  .gym__description span {
+  .gym__info p:first-of-type {
+    margin-bottom: 36px;
+    padding: 0;
+  }
+
+  .gym__info p:last-of-type {
     display: none;
   }
 
+  // .gym__description {
+  //   padding-left: 61px;
+  //   padding-right: 48px;
+  // }
+
+  // .gym__description span {
+  //   display: none;
+  // }
+
   .gym__video {
     align-self: center;
-    margin-left: 0;
-    margin-top: -88px;
+    // margin-left: 0;
+    // margin-top: -88px;
     width: 266px;
     height: 167px;
+    left: 50%;
+    bottom: 21px;
+    transform: translateX(-50%);
+    background-color: $dark-blue;
     background-image: url("../img/video-tablet@1x.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -194,33 +209,38 @@
     width: auto;
     box-sizing: border-box;
     padding: 0;
-    padding-bottom: 71px;
+    padding-bottom: 202px;
   }
 
   .gym__info {
-    padding: 67px 22px 33px 15px;
-  }
-
-  .gym__info h2,
-  .gym__description,
-  .gym__note {
-    text-align: left;
+    padding: 67px 22px 26px 15px;
   }
 
   .gym__info h2 {
+    text-align: left;
     font-size: 32px;
     line-height: 32px;
     margin-bottom: 8px;
   }
 
-  .gym__note {
-    margin-bottom: 24px;
-  }
-
-  .gym__description {
+  .gym__info p {
+    text-align: left;
     padding-left: 0;
     padding-right: 14px;
   }
+
+  .gym__info p:first-of-type {
+    margin-bottom: 24px;
+  }
+
+  // .gym__note {
+  //   margin-bottom: 24px;
+  // }
+
+  // .gym__description {
+  //   padding-left: 0;
+  //   padding-right: 14px;
+  // }
 
   .gym__image img {
     width: 320px;
@@ -234,8 +254,11 @@
 
   .gym__video {
     align-self: center;
-    margin-left: 0;
-    margin-top: 36px;
+    // margin-left: 0;
+    // margin-top: 36px;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
     width: 320px;
     height: 167px;
     background-image: url("../img/video-mobile@1x.jpg");

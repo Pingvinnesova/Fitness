@@ -20,6 +20,10 @@
   color: $white;
   text-transform: uppercase;
   text-decoration: none;
+
+  &:hover {
+    color: $dark-blue;
+  }
 }
 
 @media (max-width: $tablet-width) {
