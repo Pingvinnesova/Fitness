@@ -71,7 +71,6 @@
         </div>
       </section>
       <section class="membership" id="membership">
-        <div class="membership__container">
           <h2>Абонементы</h2>
           <ul class="membership__months">
             <li><a href="#" class="membership__link membership__link--active">1 месяц</a></li>
@@ -98,29 +97,40 @@
               <a class="membership__button" href="buy-membership.html">Купить абонемент</a>
             </li>
           </ul>
-        </div>
       </section>
       <section class="advertizing">
         <div class="advertizing__container">
           <div class="advertizing__info">
-            <div>
+            <div class="advertizing__header">
               <h2>Super Games</h2>
-              <div class="advertizing__date">
-                <p>Дата</p>
-                <p>
-                  <span>7</span>
-                  <span>марта 2019</span>
-                </p>
-              </div>
-              <div class="advertizing__time">
-                <p>Время</p>
-                <time>12:00</time>
+              <div class="advertizing__timetable">
+                <div class="advertizing__date">
+                  <p>Дата</p>
+                  <p>
+                    <span class="advertizing__number">7</span>
+                    <span class="advertizing__month">марта 2019</span>
+                  </p>
+                </div>
+                <div class="advertizing__time">
+                  <p>Время</p>
+                  <p>12:00</p>
+                </div>
               </div>
             </div>
-            <p>Ежегодные соревнования по CrossFit</p>
+            <p><span class="advertizing__note">Ежегодные соревнования по CrossFit</span></p>
             <a class="advertizing__button button" href="#">Заполнить заявку</a>
           </div>
-          <div class="advertizing__image"></div>
+          <div class="advertizing__image">
+            <picture>
+  <!--             <source type="image/webp" media="(max-width: 1199px)" srcset="img/super-games-mobile@1x.webp 1x, img/super-games-tablet@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 767px)" srcset="img/super-games-mobile@1x.webp 1x, img/super-games-mobile@2x.webp 2x">
+              <source type="image/webp" srcset="img/super-games-desktop@1x.webp 1x, img/super-games-desktop@2x.webp 2x"> -->
+              <source media="(max-width: 767px)" srcset="img/super-games-mobile@1x.jpg 1x, img/super-games-mobile@2x.jpg 2x">
+              <source media="(max-width: 1199px)" srcset="img/super-games-tablet@1x.jpg 1x, img/super-games-tablet@2x.jpg 2x">
+
+              <img src="img/super-games-desktop@1x.jpg" srcset="img/super-games-desktop@2x.jpg 2x" alt="Соревнование по CrossFit">
+            </picture>
+          </div>
         </div>
       </section>
       <section class="trainers">
