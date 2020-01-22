@@ -1,10 +1,12 @@
 .membership {
+  position: relative;
   width: 100%;
   background-color: $light-grey;
   padding: 122px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: -1;
 }
 
 .membership h2 {
@@ -72,13 +74,15 @@
 }
 
 .membership__list {
+  position: relative;
   width: 1160px;
-  margin: 0 auto;
   align-self: flex-start;
   display: flex;
   flex-wrap: wrap;
+  z-index: 20;
 
   @include list-reset;
+  margin: 0 auto;
 }
 
 .membership__list h3 {
@@ -147,17 +151,16 @@
 .membership__item {
   position: relative;
   width: 357px;
+  z-index: 20;
   box-sizing: border-box;
   background: $white;
   padding: 49px 69px 62px 69px;
-  // margin-right: 40px;
   margin-right: 3.8%;
   border: 7px solid transparent;
   cursor: pointer;
 
   &:hover,
   &:focus {
-    // border: 7px solid transparent;
     border-image: linear-gradient(-111.72deg, #ed0233 17.6%, #003eb7 95.31%);
     border-image-slice: 1;
   }
