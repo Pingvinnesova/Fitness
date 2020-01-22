@@ -1,0 +1,174 @@
+.trainers {
+  width: 1366px;
+  background-color: $white;
+  padding: 49px 39px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.trainers__slider {
+  display: flex;
+  align-self: flex-start;
+}
+
+.trainers h2 {
+  @include desktop-header;
+  margin-bottom: 51px;
+  align-self: flex-start;
+  margin-left: 58px;
+}
+
+.trainers__list {
+  @include list-reset;
+  display: flex;
+}
+
+.trainers__name {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 294px;
+  box-sizing: border-box;
+  padding: 20px;
+  // padding-top: 53px; //убрать
+  padding-top: 245px;
+}
+
+.trainers__name p {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.trainers__name ul {
+  margin-left: 35px;
+}
+
+.trainers__name p,
+.trainers__name ul {
+  display: none;
+}
+
+.trainers__item {
+  position: relative;
+  width: 260px;
+  height: 294px;
+  margin-right: 40px;
+  background-color: $dark-blue;
+  cursor: pointer;
+
+  &:hover {
+    .trainers__name {
+      padding-top: 53px;
+      background-color: rgba(16, 38, 84, 0.89);
+    }
+
+    .trainers__name p {
+      display: block;
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .trainers__name ul {
+      display: block;
+      margin-left: 35px;
+    }
+  }
+}
+
+.trainers__item img {
+  width: 260px;
+  height: 294px;
+}
+
+.trainers h3 {
+  padding: 0;
+  margin: 0;
+  // margin-top: 230px;
+  text-align: center;
+  font-family: "RobotoCondensedBold", "Arial", sans-serif;
+  font-size: 18px;
+  // line-height: 27px;
+  line-height: 23px;
+  color: $white;
+}
+
+.trainers p {
+  padding: 0;
+  margin: 0;
+  font-family: "RobotoCondensedRegular", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: $grey;
+}
+
+.trainers__description {
+  @include list-reset;
+}
+
+.trainers__description li {
+  position: relative;
+  padding-left: 15px;
+  margin-bottom: 13px;
+  font-family: "RobotoCondensedRegular", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  color: $white;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: $white;
+  }
+}
+
+.trainers__switch {
+  width: 18px;
+  height: 40px;
+  margin-right: 38px;
+  align-self: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: 0;
+  cursor: pointer;
+  background-image: url("../img/icon-prev.svg");
+  background-size: 16px 32px;
+  background-position: center center;
+
+  &:hover,
+  &:focus {
+    background-color: $dark-blue;
+  }
+}
+
+.trainers__switch svg:hover {
+  fill: $dark-blue;
+}
+
+.trainers__switch--next {
+  transform: rotate(180deg);
+  margin-right: 0;
+}
+
+@media (max-width: $tablet-width) {
+  .trainers h2 {
+    @include tablet-header;
+    margin-bottom: 51px;
+    align-self: center;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .trainers h2 {
+    @include mobile-header;
+  }
+}
