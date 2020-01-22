@@ -79,14 +79,19 @@
   transform: translateX(-54%);
   width: 364px;
   height: 228px;
-  // margin-top: -113px;
-  // margin-left: 438px;
   background-image: url("../img/video-desktop@1x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/video-desktop@2x.jpg");
+  }
+}
+
+@media (max-width: 1318px) {
+  .gym__video {
+    left: 60%;
+    transform: translateX(-60%);
   }
 }
 

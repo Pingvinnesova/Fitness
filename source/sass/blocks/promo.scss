@@ -84,18 +84,18 @@
   }
 }
 
-.promo__image {
-  width: 500px;
-  height: 556px;
-  margin-top: -5px;
-  background-image: url("../img/promo-desktop@1x.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+// .promo__image {
+//   width: 500px;
+//   height: 556px;
+//   margin-top: -5px;
+//   background-image: url("../img/promo-desktop@1x.jpg");
+//   background-repeat: no-repeat;
+//   background-size: cover;
 
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/promo-desktop@2x.jpg");
-  }
-}
+//   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+//     background-image: url("../img/promo-desktop@2x.jpg");
+//   }
+// }
 
 .promo__social {
   @include list-reset;

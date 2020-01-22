@@ -16,6 +16,12 @@
   }
 }
 
+@media (max-width: 1318px) {
+  .main-screen__container {
+    background-position: top 60px right 180px;
+  }
+}
+
 @media (max-width: $tablet-width) {
   .main-screen__container {
     width: 768px;
