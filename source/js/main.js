@@ -11,7 +11,7 @@ anchor.addEventListener('click', function (e) {
   });
 });
 
-// slick
+// trainers
 
 $(document).ready(function() {
   $('.trainers__list').slick({
@@ -40,3 +40,16 @@ $(document).ready(function() {
       ]
   });
 });
+
+// feedback
+
+// $(document).ready(function() {
+//   $('.feedback__list').slick({
+//     infinite: false,
+//     speed: 350,
+//     slidesToShow: 1,
+//     slidesToScroll: 1,
+//     nextArrow: document.querySelector('.feedback__switch--next'),
+//     prevArrow: document.querySelector('.feedback__switch--prev'),
+//   });
+// });

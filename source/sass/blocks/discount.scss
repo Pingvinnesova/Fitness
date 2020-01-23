@@ -158,7 +158,8 @@
 
 @media (max-width: $tablet-width) {
   .discount {
-    padding-top: 103px;
+    padding-top: 100px;
+    padding-bottom: 98px;
   }
 
   .discount h2 {
@@ -219,6 +220,7 @@
 @media (max-width: $mobile-width) {
   .discount {
     padding-top: 69px;
+    padding-bottom: 41px;
   }
 
   .discount h2 {
