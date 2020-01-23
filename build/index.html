@@ -306,24 +306,84 @@
         </div>
       </section>
       <section class="advantages">
-        <div class="advantages__container">
+        <h2>Наши преимущества</h2>
+        <ul class="advantages__list">
+          <li class="advantages__item advantages__item--square">
+            <div class="advantages__image advantages__image--square">
+              <picture>
+                <source media="(max-width: 767px)" srcset="img/number-900-mobile.svg">
+                <img src="img/number-900.svg" width="108" height="75" alt="900 кв/м">
+              </picture>
+            </div>
+            <div class="advantages__description">
+              <h3>Площадь</h3>
+              <p>Занимайтесь без очередей и толпучки</p>
+            </div>
+          </li>
+          <li class="advantages__item  advantages__item--comfort">
+            <div class="advantages__image advantages__image--comfort">
+              <picture>
+                <source media="(max-width: 767px)" srcset="img/number-350-mobile.svg">
+                <img src="img/number-350.svg" width="108" height="75" alt="350 мест">
+              </picture>
+            </div>
+            <div class="advantages__description">
+              <h3>Комфорт</h3>
+              <p>Просторные раздевалки, душевые, фен, Wi-Fi, кулеры</p>
+            </div>
+          </li>
+          <li class="advantages__item advantages__item--trainers">
+            <h3>
+              <span class="advantages__number">100</span>
+              <span class="advantages__note">Тренажёров</span>
+            </h3>
+            <p>Современные тренажёры на все группы мышц</p>
+          </li>
+          <li class="advantages__item advantages__item--cars">
+            <div class="advantages__image advantages__image--cars">
+              <picture>
+                <source media="(max-width: 767px)" srcset="img/number-70-mobile.svg">
+                <img src="img/number-70.svg" width="72" height="75" alt="70 машин">
+              </picture>
+            </div>
+            <div class="advantages__description">
+              <h3>Собственная парковка</h3>
+              <p>Вы всегда найдёте место для своей машины на нашей парковке</p>
+            </div>
+          </li>
+          <li class="advantages__item advantages__item--experience">
+            <div class="advantages__image advantages__image--experience">
+              <picture>
+                <source media="(max-width: 767px)" srcset="img/number-5-mobile.svg">
+                <img src="img/number-5.svg" width="70" height="74" alt="5+ лет">
+              </picture>
+            </div>
+            <div class="advantages__description">
+              <h3>Тренерский опыт</h3>
+              <p>Добивайтесь своих целей быстрее с профессиональным тренером</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="discounts">
+        <div class="discounts__container">
           <h2>Акции</h2>
           <div>
-            <div class="advantages__info">
+            <div class="discounts__info">
               <p>Год</p>
               <p>4999</p>
               <p>Безлимитный абонемент в тренажерный зал</p>
               <a href="#">Подробнее</a>
             </div>
-            <div class="advantages__image"></div>
+            <div class="discounts__image"></div>
           </div>
-          <ul class="advantages__list">
-            <li class="advantages__item">
+          <ul class="discounts__list">
+            <li class="discounts__item">
               <h3>Месяц бесплатно</h3>
               <p>Приведи друга, получи абонемент в подарок</p>
               <a href="#">Подробнее</a>
             </li>
-            <li class="advantages__item">
+            <li class="discounts__item">
               <h3>Скидка 20%</h3>
               <p>Корпоративный фитнес с командой</p>
               <a href="#">Подробнее</a>
@@ -407,7 +467,7 @@
       </div>
     </footer>
   </div>
-<script src="js/main.js"></script>
 <script src="js/vendor.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

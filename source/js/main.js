@@ -13,7 +13,7 @@ anchor.addEventListener('click', function (e) {
 
 // slick
 
-$(document).ready(function(){
+$(document).ready(function() {
   $('.trainers__list').slick({
     infinite: false,
     speed: 350,
@@ -24,14 +24,14 @@ $(document).ready(function(){
     prevArrow: document.querySelector('.trainers__switch--prev'),
     responsive: [
         {
-          breakpoint: 767,
+          breakpoint: 1199,
           settings: {
             slidesToShow: 2,
             slidesToScroll: 2
           }
         },
         {
-          breakpoint: 1199,
+          breakpoint: 767,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1
