@@ -6,6 +6,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 121px;
 }
 
 .feedback__item {
@@ -90,6 +91,10 @@
 }
 
 @media (max-width: $tablet-width) {
+  .feedback {
+    margin-bottom: 104px;
+  }
+
   .feedback-item {
     width: 566px;
     padding-left: 64px;
@@ -111,6 +116,7 @@
     margin: 0 auto;
     padding: 0 15px;
     box-sizing: border-box;
+    margin-bottom: 70px;
   }
 
   .feedback__item {

@@ -412,33 +412,39 @@
           </div>
         <button class="feedback__switch feedback__switch--next" type="button"><span class="visually-hidden">Предыдущий отзыв</span></button>
       </section>
-      <div>
+      <div class="contacts">
         <form class="order" action="https://echo.htmlacademy.ru" method="post">
           <h2>Бесплатное занятие</h2>
-          <input id="order__name" type="text" name="name" placeholder="Имя" required="">
-          <input id="order__number" type="tel" name="tel" placeholder="Телефон" maxlength="10" required="">
+          <div class="order__inputs">
+            <input type="text" name="name" placeholder="Имя" required="">
+            <input type="tel" name="tel" placeholder="Телефон" maxlength="10" required="">
+          </div>
           <button class="order__button" type="submit">Отправить</button>
         </form>
-        <section class="contacts">
+        <section class="info">
           <h2>Контакты</h2>
-          <ul>
-            <li>
-              <h3>Адрес:</h3>
-              <p>г. Омск, ул. 60 лет Октября, 7</p>
-            </li>
-            <li>
-              <h3>График работы:</h3>
-              <p>Пн-Вс: с 8:00 до 22:00</p>
-            </li>
-            <li>
-              <h3>Телефон:</h3>
-              <p>8-800-555-55-55</p>
-            </li>
-            <li>
-              <h3>Email:</h3>
-              <p>omsk@supergym.ru</p>
-            </li>
-          </ul>
+          <div class="info__list">
+            <div class="info__container">
+              <div class="info__item info__item--adress">
+                <h3>Адрес:</h3>
+                <p>г. Омск, ул. 60 лет Октября, 7</p>
+              </div>
+              <div class="info__item info__item--time">
+                <h3>График работы:</h3>
+                <p>Пн-Вс: с 8:00 до 22:00</p>
+              </div>
+            </div>
+            <div class="info__container">
+              <div class="info__item info__item--phone">
+                <h3>Телефон:</h3>
+                <p>8-800-555-55-55</p>
+              </div>
+              <div class="info__item info__item--email">
+                <h3>Email:</h3>
+                <p>omsk@supergym.ru</p>
+              </div>
+            </div>
+          </div>
         </section>
       </div>
     </main>
