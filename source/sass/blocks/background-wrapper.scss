@@ -1,0 +1,47 @@
+.background-wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 287px;
+    height: 494px;
+    right: 0;
+    bottom: 400px;
+    background-image: url("../img/weights-desktop@1x.png");
+    background-repeat: no-repeat;
+    background-size: 287px 494px;
+    z-index: 1;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/weights-desktop@2x.png");
+    }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .background-wrapper {
+    &::after {
+      width: 374px;
+      height: 444px;
+      bottom: 380px;
+      background-image: url("../img/weights-tablet@1x.png");
+      background-repeat: no-repeat;
+      background-size: 374px 444px;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/weights-tablet@2x.png");
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .background-wrapper {
+    &::after {
+      display: none;
+    }
+  }
+}

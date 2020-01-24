@@ -33,7 +33,6 @@
 }
 
 .order input::placeholder,
-.order input::placeholder,
 .order::placeholder {
   font-family: "RobotoCondensedRegular", "Arial", sans-serif;
   font-size: 14px;
@@ -55,6 +54,13 @@
   line-height: 16px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $white;
+    color: $dark-blue;
+  }
 }
 
 @media (max-width: $tablet-width) {

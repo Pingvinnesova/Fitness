@@ -228,9 +228,31 @@
     margin-bottom: 43px;
   }
 
+  .discount__list {
+    width: 290px;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
   .discount__info {
     display: flex;
     flex-direction: column;
+    padding-right: 0;
+    padding-left: 0;
+    padding-top: 33px;
+    padding-bottom: 44px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    width: 290px;
+    height: 598px;
+    background-image: url("../img/girl-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: 290px 299px;
+    background-position: left 0 bottom 0;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/girl-mobile@2x.jpg");
+    }
   }
 
   .discount__info h3,
@@ -255,31 +277,6 @@
   .discount__container {
     flex-direction: column;
     width: 290px;
-  }
-
-  .discount__list {
-    width: 290px;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  .discount__info {
-    padding-right: 0;
-    padding-left: 0;
-    padding-top: 33px;
-    padding-bottom: 44px;
-    margin-bottom: 30px;
-    box-sizing: border-box;
-    width: 290px;
-    height: 598px;
-    background-image: url("../img/girl-mobile@1x.jpg");
-    background-repeat: no-repeat;
-    background-size: 290px 299px;
-    background-position: left 0 bottom 0;
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/girl-mobile@2x.jpg");
-    }
   }
 
   .discount__item {
@@ -314,16 +311,4 @@
   .discount__item--free p {
     margin-bottom: 28px;
   }
-
-
-
-
-  // .discount__item p {
-  //   margin-bottom: 68px;
-  // }
-
-  // .discount__item--free p {
-  //   width: 165px;
-  //   margin-bottom: 46px;
-  // }
 }

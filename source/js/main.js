@@ -41,7 +41,7 @@ $(document).ready(function() {
   });
 });
 
-// feedback
+// // feedback
 
 // $(document).ready(function() {
 //   $('.feedback__list').slick({

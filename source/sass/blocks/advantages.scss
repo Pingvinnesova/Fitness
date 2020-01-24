@@ -143,14 +143,14 @@
   position: relative;
 
   &::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 340px;
-  height: 2px;
-  background-color: rgba(209, 10, 66, 0.2);
-}
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 340px;
+    height: 2px;
+    background-color: rgba(209, 10, 66, 0.2);
+  }
 }
 
 @media (max-width: $tablet-width) {
@@ -161,6 +161,7 @@
 
   .advantages h2 {
     text-align: center;
+
     @include tablet-header;
     margin-bottom: 43px;
   }
@@ -337,13 +338,13 @@
   }
 
   .advantages__image--square {
-     width: 89px;
-     height: 63px;
+    width: 89px;
+    height: 63px;
   }
 
   .advantages__image--cars {
-     width: 59px;
-     height: 63px;
+    width: 59px;
+    height: 63px;
   }
 
   .advantages__image--experience {
