@@ -19,7 +19,7 @@ $(document).ready(function() {
     speed: 350,
     slidesToShow: 4,
     slidesToScroll: 4,
-    variableWidth: true,
+    // variableWidth: true,
     nextArrow: document.querySelector('.trainers__switch--next'),
     prevArrow: document.querySelector('.trainers__switch--prev'),
     responsive: [
@@ -43,16 +43,17 @@ $(document).ready(function() {
 
 // // feedback
 
-// $(document).ready(function() {
-//   $('.feedback__list').slick({
-//     infinite: false,
-//     speed: 350,
-//     slidesToShow: 1,
-//     slidesToScroll: 1,
-//     nextArrow: document.querySelector('.feedback__switch--next'),
-//     prevArrow: document.querySelector('.feedback__switch--prev'),
-//   });
-// });
+$(document).ready(function() {
+  $('.feedback__list').slick({
+    infinite: false,
+    speed: 350,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    // variableWidth: true,
+    nextArrow: document.querySelector('.feedback__switch--next'),
+    prevArrow: document.querySelector('.feedback__switch--prev'),
+  });
+});
 
 
 // footer
@@ -73,18 +74,7 @@ var cloneBlock = function () {
     if (footerNav.contains(NewLi)) {
       footerNav.removeChild(NewLi);
       logo.classList.remove('footer__logo--show');
-
-      // copyright.classList.remove('page-footer__copyright--show');
     }
-    // newBlock.appendChild(cloneLogo);
-    // console.log(newBlock);
-    // document.footerNav.appendChild(newBlock);
-    // copyright.classList.add('page-footer__copyright--show');
-  // } else {
-    // if (wrapper.contains(cloneCopyright)) {
-    //   wrapper.removeChild(cloneCopyright);
-    //   copyright.classList.remove('page-footer__copyright--show');
-    // }
   }
 };
 
@@ -97,3 +87,18 @@ window.addEventListener('resize', function () {
     cloneBlock();
   // }
 }, false);
+
+// focus
+
+
+var membershipItem = document.querySelector('.membership__item');
+var membershipItemActive = document.querySelector('.membership__item--active');
+membershipItem.addEventListener("focus", function( event ) {
+  membershipItemActive.classList.remove('membership__item--active');
+}, true);
+
+var membershipLink = document.querySelector('.membership__link');
+var membershipLinkActive = document.querySelector('.membership__link--active');
+membershipLink.addEventListener("focus", function( event ) {
+  membershipLinkActive.classList.remove('membership__link--active');
+}, true);

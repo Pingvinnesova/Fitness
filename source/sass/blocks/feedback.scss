@@ -9,7 +9,7 @@
   margin-bottom: 121px;
 }
 
-.feedback__item {
+.feedback__list {
   width: 562px;
   box-sizing: border-box;
   padding-left: 64px;
@@ -17,6 +17,9 @@
   padding-right: 63px;
   padding-bottom: 57px;
   background-color: #1c3374;
+}
+
+.feedback__item {
   display: flex;
   flex-wrap: wrap;
 }
