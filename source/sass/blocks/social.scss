@@ -1,0 +1,42 @@
+  .social__link img {
+    width: 100%;
+
+    &:hover {
+      background-color: $crimson;
+    }
+  }
+
+  .social__link--vk {
+    display: block;
+    width: 24px;
+    height: 13px;
+  }
+
+  .social__link--ig {
+    display: block;
+    width: 27px;
+    height: 27px;
+  }
+
+  .social__link--fb {
+    display: block;
+    width: 12px;
+    height: 22px;
+  }
+
+@media (max-width: $mobile-width) {
+  .social__link--vk {
+    width: 32px;
+    height: 17px;
+  }
+
+  .social__link--ig {
+    width: 24px;
+    height: 22px;
+  }
+
+  .social__link--fb {
+    width: 14px;
+    height: 27px;
+  }
+}

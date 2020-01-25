@@ -53,3 +53,47 @@ $(document).ready(function() {
 //     prevArrow: document.querySelector('.feedback__switch--prev'),
 //   });
 // });
+
+
+// footer
+
+
+var logo = document.querySelector('.footer__logo');
+var footerNav = document.querySelector('.footer__nav');
+var cloneLogo = logo.cloneNode(true);
+var NewLi = document.createElement('li');
+
+NewLi.appendChild(cloneLogo);
+
+var cloneBlock = function () {
+  if (window.matchMedia('(max-width: 767px)').matches) {
+    footerNav.prepend(NewLi);
+    logo.classList.add('footer__logo--show');
+  } else {
+    if (footerNav.contains(NewLi)) {
+      footerNav.removeChild(NewLi);
+      logo.classList.remove('footer__logo--show');
+
+      // copyright.classList.remove('page-footer__copyright--show');
+    }
+    // newBlock.appendChild(cloneLogo);
+    // console.log(newBlock);
+    // document.footerNav.appendChild(newBlock);
+    // copyright.classList.add('page-footer__copyright--show');
+  // } else {
+    // if (wrapper.contains(cloneCopyright)) {
+    //   wrapper.removeChild(cloneCopyright);
+    //   copyright.classList.remove('page-footer__copyright--show');
+    // }
+  }
+};
+
+// if (copyright || wrapper) {
+  cloneBlock();
+// }
+
+window.addEventListener('resize', function () {
+  // if (copyright || wrapper) {
+    cloneBlock();
+  // }
+}, false);

@@ -1,0 +1,147 @@
+.footer {
+  width: 100%;
+  background-color: #030a1a;
+  flex: 0 0 auto;
+}
+
+.footer__container {
+  max-width: 1366px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 40px 103px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__nav {
+  @include list-reset;
+  display: flex;
+  width: 480px;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 73px;
+}
+
+.footer__nav-item {
+  margin-right: 40px;
+}
+
+.footer__nav-item:last-child {
+  margin-right: 0;
+}
+
+.footer__nav-item a {
+  text-decoration: none;
+  color: $white;
+  font-family: "RobotoCondensedRegular", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+
+  &:hover {
+    color: $crimson;
+  }
+}
+
+.footer__social {
+  @include list-reset;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.footer__social li {
+  border-bottom: 2px solid transparent;
+
+  &:hover {
+    border-bottom: 2px solid $crimson;
+  }
+}
+
+.footer__social li {
+  margin-right: 25px;
+}
+
+.footer__social li:last-child {
+  margin-right: 0;
+}
+
+.footer__logo {
+  padding-top: 3px;
+}
+
+
+@media (max-width: $tablet-width) {
+  .footer__container {
+    width: 768px;
+    padding: 43px 45px;
+  }
+
+  .footer__nav {
+    width: 430px;
+    padding-left: 58px;
+  }
+
+  .footer__nav-item {
+    margin-right: 31px;
+  }
+
+  .footer__nav-item {
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .footer__container {
+    width: 320px;
+    padding: 50px 15px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer__nav {
+    width: 290px;
+    height: 119px;
+    padding-left: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+  }
+
+  .footer__nav li {
+    margin-bottom: 19px;
+    margin-right: 76px;
+  }
+
+  .footer__nav li:nth-child(3n) {
+    margin-bottom: 0;
+  }
+
+  .footer__nav-item {
+    margin-right: 0;
+  }
+
+  .footer__nav-item a {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .footer__logo {
+    font-size: 20px;
+    line-height: 20px;
+    font-family: "BebasNeueBold", "Arial", cursive;
+  }
+
+  .footer__logo--show {
+    display: none;
+  }
+
+  .footer__social li {
+    margin-right: 35px;
+  }
+
+  .footer__social li:last-child {
+    margin-right: 0;
+  }
+}
