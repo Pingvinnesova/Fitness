@@ -9,7 +9,7 @@
     width: 287px;
     height: 494px;
     right: 0;
-    bottom: 400px;
+    bottom: 540px;
     background-image: url("../img/weights-desktop@1x.png");
     background-repeat: no-repeat;
     background-size: 287px 494px;
@@ -24,12 +24,12 @@
 @media (max-width: $tablet-width) {
   .background-wrapper {
     &::after {
-      width: 374px;
+      width: 347px;
       height: 444px;
-      bottom: 380px;
+      bottom: 342px;
       background-image: url("../img/weights-tablet@1x.png");
       background-repeat: no-repeat;
-      background-size: 374px 444px;
+      background-size: 347px 444px;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
         background-image: url("../img/weights-tablet@2x.png");

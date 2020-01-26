@@ -2,16 +2,17 @@
 
 var anchor = document.querySelector('.scroll-to');
 
-anchor.addEventListener('click', function (e) {
-  e.preventDefault();
-  var blockID = anchor.getAttribute('href');
-  document.querySelector(blockID).scrollIntoView({
-    behavior: 'smooth',
-    block: 'start'
+if (anchor) {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    var blockID = anchor.getAttribute('href');
+    document.querySelector(blockID).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
   });
-});
-
-// trainers
+}
+// trainers-slider
 
 $(document).ready(function() {
   $('.trainers__list').slick({
@@ -19,7 +20,6 @@ $(document).ready(function() {
     speed: 350,
     slidesToShow: 4,
     slidesToScroll: 4,
-    // variableWidth: true,
     nextArrow: document.querySelector('.trainers__switch--next'),
     prevArrow: document.querySelector('.trainers__switch--prev'),
     responsive: [
@@ -41,7 +41,7 @@ $(document).ready(function() {
   });
 });
 
-// // feedback
+// feedback-slider
 
 $(document).ready(function() {
   $('.feedback__list').slick({
@@ -49,7 +49,6 @@ $(document).ready(function() {
     speed: 350,
     slidesToShow: 1,
     slidesToScroll: 1,
-    // variableWidth: true,
     nextArrow: document.querySelector('.feedback__switch--next'),
     prevArrow: document.querySelector('.feedback__switch--prev'),
   });
@@ -58,12 +57,10 @@ $(document).ready(function() {
 
 // footer
 
-
 var logo = document.querySelector('.footer__logo');
 var footerNav = document.querySelector('.footer__nav');
 var cloneLogo = logo.cloneNode(true);
 var NewLi = document.createElement('li');
-
 NewLi.appendChild(cloneLogo);
 
 var cloneBlock = function () {
@@ -78,14 +75,14 @@ var cloneBlock = function () {
   }
 };
 
-// if (copyright || wrapper) {
+if (footerNav || logo) {
   cloneBlock();
-// }
+}
 
 window.addEventListener('resize', function () {
-  // if (copyright || wrapper) {
+  if (footerNav || logo) {
     cloneBlock();
-  // }
+  }
 }, false);
 
 // focus
@@ -95,26 +92,35 @@ var membershipItem = document.querySelector('.membership__item');
 var membershipButton = document.querySelector('.membership__button');
 var membershipItemActive = document.querySelector('.membership__item--active');
 var membershipButtonActive = document.querySelector('.membership__button--active');
-membershipItem.addEventListener("focus", function (e) {
-  e.preventDefault();
-  membershipItemActive.classList.remove('membership__item--active');
-  membershipButtonActive.classList.remove('membership__button--active');
-}, true);
-
 var membershipLink = document.querySelector('.membership__link');
 var membershipLinkActive = document.querySelector('.membership__link--active');
-membershipLink.addEventListener("focus", function (e) {
-  e.preventDefault();
-  membershipLinkActive.classList.remove('membership__link--active');
-}, true);
 
-membershipItem.addEventListener("click", function (e) {
-  e.preventDefault();
-  membershipItemActive.classList.remove('membership__item--active');
-  membershipButtonActive.classList.remove('membership__button--active');
-}, true);
+if (membershipItem || membershipButton) {
+  membershipItem.addEventListener("focus", function (e) {
+    e.preventDefault();
+    membershipItemActive.classList.remove('membership__item--active');
+    membershipButtonActive.classList.remove('membership__button--active');
+  }, true);
+}
 
-membershipLink.addEventListener("click", function (e) {
-  e.preventDefault();
-  membershipLinkActive.classList.remove('membership__link--active');
-}, true);
+if (membershipLink) {
+  membershipLink.addEventListener("focus", function (e) {
+    e.preventDefault();
+    membershipLinkActive.classList.remove('membership__link--active');
+  }, true);
+}
+
+if (membershipItem || membershipButton) {
+  membershipItem.addEventListener("click", function (e) {
+    e.preventDefault();
+    membershipItemActive.classList.remove('membership__item--active');
+    membershipButtonActive.classList.remove('membership__button--active');
+  }, true);
+}
+
+if (membershipLink) {
+  membershipLink.addEventListener("click", function (e) {
+    e.preventDefault();
+    membershipLinkActive.classList.remove('membership__link--active');
+  }, true);
+}

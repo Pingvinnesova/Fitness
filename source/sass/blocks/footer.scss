@@ -53,14 +53,11 @@
 
 .footer__social li {
   border-bottom: 2px solid transparent;
+  margin-right: 25px;
 
   &:hover {
     border-bottom: 2px solid $crimson;
   }
-}
-
-.footer__social li {
-  margin-right: 25px;
 }
 
 .footer__social li:last-child {
@@ -79,15 +76,15 @@
   }
 
   .footer__nav {
-    width: 430px;
-    padding-left: 58px;
+    width: 385px;
+    padding-left: 12px;
   }
 
   .footer__nav-item {
     margin-right: 31px;
   }
 
-  .footer__nav-item {
+  .footer__social li {
     margin-right: 20px;
   }
 }
@@ -95,7 +92,7 @@
 @media (max-width: $mobile-width) {
   .footer__container {
     width: 320px;
-    padding: 50px 15px;
+    padding: 47px 15px;
     flex-direction: column;
     align-items: flex-start;
   }
@@ -139,7 +136,7 @@
   }
 
   .footer__social li {
-    margin-right: 35px;
+    margin-right: 43px;
   }
 
   .footer__social li:last-child {

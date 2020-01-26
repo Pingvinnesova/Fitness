@@ -5,7 +5,7 @@
   width: 100%;
   height: auto;
   background-color: $light-grey;
-  padding-top: 115px;
+  padding-top: 118px;
   padding-bottom: 115px;
 }
 
@@ -105,7 +105,7 @@
   background-color: $dark-blue;
   color: $white;
   flex-direction: column;
-  padding: 38px 25px 15px 25px;
+  padding: 38px 28px 15px 28px;
   box-sizing: border-box;
 }
 
@@ -152,7 +152,7 @@
 
 @media (max-width: $tablet-width) {
   .advantages {
-    padding-top: 103px;
+    padding-top: 100px;
     padding-bottom: 50px;
   }
 
