@@ -15,7 +15,6 @@
 
 .trainers__list {
   @include list-reset;
-  // display: flex;
 }
 
 .trainers__name {
@@ -51,7 +50,8 @@
   background-color: $dark-blue;
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus {
     .trainers__name {
       padding-top: 53px;
       background-color: rgba(16, 38, 84, 0.89);
@@ -82,11 +82,9 @@
 .trainers h3 {
   padding: 0;
   margin: 0;
-  // margin-top: 230px;
   text-align: center;
   font-family: "RobotoCondensedBold", "Arial", sans-serif;
   font-size: 18px;
-  // line-height: 27px;
   line-height: 23px;
   color: $white;
 }

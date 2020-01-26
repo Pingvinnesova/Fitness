@@ -1,7 +1,8 @@
   .social__link img {
     width: 100%;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: $crimson;
     }
   }

@@ -166,7 +166,6 @@
 }
 
 .membership__item--active {
-  // border: 7px solid transparent;
   border-image: linear-gradient(-111.72deg, #ed0233 17.6%, #003eb7 95.31%);
   border-image-slice: 1;
 }
@@ -207,12 +206,6 @@
     padding-bottom: 59px;
   }
 
-  // .membership__container {
-  //   // width: 768px;
-  //   box-sizing: border-box;
-  //   padding: 0 45px 0 45px;
-  // }
-
   .membership h2 {
     @include tablet-header;
     margin-bottom: 20px;
@@ -231,7 +224,6 @@
     width: 440px;
     flex-direction: column;
     align-items: center;
-    // width: 100%;
     margin: 0 auto;
   }
 
@@ -258,7 +250,6 @@
     flex-direction: column;
     margin-right: 0;
     width: 442px;
-    // width: 440px;
     padding-top: 56px;
     padding-bottom: 63px;
     margin-bottom: 41px;
@@ -270,7 +261,6 @@
     text-align: center;
     padding: 24px;
     align-self: center;
-    // margin: 0 auto;
   }
 }
 

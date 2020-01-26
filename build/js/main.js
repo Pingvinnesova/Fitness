@@ -92,13 +92,29 @@ window.addEventListener('resize', function () {
 
 
 var membershipItem = document.querySelector('.membership__item');
+var membershipButton = document.querySelector('.membership__button');
 var membershipItemActive = document.querySelector('.membership__item--active');
-membershipItem.addEventListener("focus", function( event ) {
+var membershipButtonActive = document.querySelector('.membership__button--active');
+membershipItem.addEventListener("focus", function (e) {
+  e.preventDefault();
   membershipItemActive.classList.remove('membership__item--active');
+  membershipButtonActive.classList.remove('membership__button--active');
 }, true);
 
 var membershipLink = document.querySelector('.membership__link');
 var membershipLinkActive = document.querySelector('.membership__link--active');
-membershipLink.addEventListener("focus", function( event ) {
+membershipLink.addEventListener("focus", function (e) {
+  e.preventDefault();
+  membershipLinkActive.classList.remove('membership__link--active');
+}, true);
+
+membershipItem.addEventListener("click", function (e) {
+  e.preventDefault();
+  membershipItemActive.classList.remove('membership__item--active');
+  membershipButtonActive.classList.remove('membership__button--active');
+}, true);
+
+membershipLink.addEventListener("click", function (e) {
+  e.preventDefault();
   membershipLinkActive.classList.remove('membership__link--active');
 }, true);

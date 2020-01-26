@@ -40,27 +40,6 @@
   margin-bottom: 39px;
 }
 
-// .gym__note {
-//   display: block;
-//   font-family: "RobotoCondensedRegular", "Arial", sans-serif;
-//   font-size: 18px;
-//   line-height: 27px;
-//   color: $dark-blue;
-//   margin-bottom: 39px;
-// }
-
-// .gym__description {
-//   font-family: "RobotoCondensedRegular", "Arial", sans-serif;
-//   font-size: 16px;
-//   line-height: 24px;
-//   color: $dark-blue;
-// }
-
-// .gym__description span {
-//   display: block;
-//   margin-top: 8px;
-// }
-
 .gym__image img {
   width: 660px;
   height: auto;
@@ -72,13 +51,13 @@
 }
 
 .gym__video {
-  // align-self: flex-start;
   position: absolute;
   left: 54%;
   bottom: 118px;
   transform: translateX(-54%);
   width: 364px;
   height: 228px;
+  background-color: $dark-blue;
   background-image: url("../img/video-desktop@1x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -108,7 +87,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
-  &:hover {
+  &:hover,
+  &:focus {
     width: 120px;
     height: 120px;
     background-size: 120px auto;
@@ -135,12 +115,10 @@
 
   .gym__image img {
     width: 678px;
-    // height: 345px;
   }
 
   .gym__image {
     width: 678px;
-    // height: 345px;
   }
 
   .gym__info {
@@ -163,19 +141,8 @@
     display: none;
   }
 
-  // .gym__description {
-  //   padding-left: 61px;
-  //   padding-right: 48px;
-  // }
-
-  // .gym__description span {
-  //   display: none;
-  // }
-
   .gym__video {
     align-self: center;
-    // margin-left: 0;
-    // margin-top: -88px;
     width: 266px;
     height: 167px;
     left: 50%;
@@ -196,7 +163,8 @@
     height: 73px;
     background-size: 73px auto;
 
-    &:hover {
+    &:hover,
+    &:focus {
       width: 100px;
       height: 100px;
       background-size: 100px auto;
@@ -233,29 +201,16 @@
     margin-bottom: 24px;
   }
 
-  // .gym__note {
-  //   margin-bottom: 24px;
-  // }
-
-  // .gym__description {
-  //   padding-left: 0;
-  //   padding-right: 14px;
-  // }
-
   .gym__image img {
     width: 320px;
-    // height: 313px;
   }
 
   .gym__image {
     width: auto;
-    // margin: 0 auto;
   }
 
   .gym__video {
     align-self: center;
-    // margin-left: 0;
-    // margin-top: 36px;
     left: 50%;
     bottom: 70px;
     transform: translateX(-50%);

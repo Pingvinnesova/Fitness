@@ -1,5 +1,6 @@
 .header {
   display: flex;
+  flex: 1 0 auto;
   justify-content: space-between;
   max-width: 1366px;
   box-sizing: border-box;
@@ -21,7 +22,8 @@
   text-transform: uppercase;
   text-decoration: none;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $dark-blue;
   }
 }

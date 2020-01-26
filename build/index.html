@@ -120,7 +120,7 @@
                 </div>
               </div>
               <p><span class="advertizing__note">Ежегодные соревнования по CrossFit</span></p>
-              <a class="advertizing__button button" href="#">Заполнить заявку</a>
+              <a class="advertizing__button button" href="application.html">Заполнить заявку</a>
             </div>
             <div class="advertizing__image">
               <picture>
@@ -141,7 +141,7 @@
         <div class="trainers__slider">
           <button class="trainers__switch trainers__switch--prev" type="button"><span class="visually-hidden">Следующий отзыв</span></button>
           <div class="trainers__list" id="trainers__list">
-            <div class="trainers__item">
+            <div class="trainers__item" tabindex="0">
               <picture>
                 <source type="image/webp" srcset="img/trainer-1-desktop@1x.webp 1x, img/trainer-1-desktop@2x.webp 2x">
                 <img src="img/trainer-1-desktop@1x.jpg" srcset="img/trainer-1-deskto@2x.jpg 2x" alt="Тренер Анна Павлова">
@@ -156,7 +156,7 @@
                 </ul>
               </div>
             </div>
-            <div class="trainers__item">
+            <div class="trainers__item" tabindex="0">
               <picture>
                 <source type="image/webp" srcset="img/trainer-2-desktop@1x.webp 1x, img/trainer-2-desktop@2x.webp 2x">
                 <img src="img/trainer-2-desktop@1x.jpg" srcset="img/trainer-2-deskto@2x.jpg 2x" alt="Тренер Алексей Лавров">
@@ -171,7 +171,7 @@
                 </ul>
               </div>
             </div>
-            <div class="trainers__item">
+            <div class="trainers__item" tabindex="0">
               <picture>
                 <source type="image/webp" srcset="img/trainer-3-desktop@1x.webp 1x, img/trainer-3-desktop@2x.webp 2x">
                 <img src="img/trainer-3-desktop@1x.jpg" srcset="img/trainer-3-deskto@2x.jpg 2x" alt="Тренер Александр Пашков">
@@ -186,7 +186,7 @@
                 </ul>
               </div>
             </div>
-            <div class="trainers__item">
+            <div class="trainers__item" tabindex="0">
               <picture>
                 <source type="image/webp" srcset="img/trainer-4-desktop@1x.webp 1x, img/trainer-4-desktop@2x.webp 2x">
                 <img src="img/trainer-4-desktop@1x.jpg" srcset="img/trainer-4-deskto@2x.jpg 2x" alt="Тренер Мария Кетова">
@@ -325,14 +325,17 @@
       </section>
       <div class="contacts">
         <form class="order" action="https://echo.htmlacademy.ru" method="post">
+          <div class="order-wrapper">
           <h2>Бесплатное занятие</h2>
           <div class="order__inputs">
             <input type="text" name="name" placeholder="Имя" required="">
             <input type="tel" name="tel" placeholder="Телефон" maxlength="10" required="">
           </div>
           <button class="order__button" type="submit">Отправить</button>
+        </div>
         </form>
         <section class="info">
+          <div class="info-wrapper">
           <h2>Контакты</h2>
           <div class="info__list">
             <div class="info__container">
@@ -348,14 +351,15 @@
             <div class="info__container">
               <div class="info__item info__item--phone">
                 <h3>Телефон:</h3>
-                <p>8-800-555-55-55</p>
+                <p><a href="tel:88005555555">8-800-555-55-55</a></p>
               </div>
               <div class="info__item info__item--email">
                 <h3>Email:</h3>
-                <p>omsk@supergym.ru</p>
+                <p><a href="mailto:omsk@supergym.ru">omsk@supergym.ru</a></p>
               </div>
             </div>
           </div>
+        </div>
         </section>
       </div>
     </main>

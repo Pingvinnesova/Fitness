@@ -2,7 +2,6 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  // align-items: center;
   width: 100%;
   height: auto;
   background-color: $light-grey;
@@ -28,8 +27,7 @@
 .advantages p {
   margin: 0;
   color: $dark-blue;
-  font-family: "RobotoCondensedRegular", "Arial", sans-serif;
-  font-weight: 300;
+  font-family: "RobotoCondensedLight", "Arial", sans-serif;
   font-size: 16px;
   line-height: 22px;
 }
@@ -39,10 +37,9 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  align-items: flex-start;
   justify-content: flex-start;
   height: 316px;
-  min-width: 1040px;
+  width: 1040px;
   margin: 0 auto;
 }
 
@@ -175,8 +172,6 @@
   .advantages__list {
     flex-direction: row;
     flex-wrap: wrap;
-    // align-items: flex-start;
-    // justify-content: flex-start;
     height: auto;
     width: 768px;
     min-width: 768px;
@@ -288,8 +283,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    // align-self: center;
-    // justify-content: center;
     box-sizing: border-box;
     padding: 0 15px;
     margin-bottom: 41px;
@@ -315,9 +308,6 @@
   .advantages__list {
     padding: 0;
     flex-direction: column;
-    // align-items: center;
-    // align-self: center;
-    // justify-content: center;
     height: auto;
     width: 320px;
     min-width: auto;

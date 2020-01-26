@@ -1,9 +1,15 @@
 .order {
+  width: 100%;
+  background-color: $dark-blue;
+}
+
+.order-wrapper {
   display: flex;
   flex-direction: column;
-  width: 683px;
+  width: 589px;
   box-sizing: border-box;
-  padding: 70px 170px 63px 7.5%;
+  padding: 70px 25% 70px 10px;
+  margin-left: auto;
   background-color: $dark-blue;
 }
 
@@ -20,16 +26,25 @@
   font-size: 14px;
   line-height: 16px;
   border: none;
+  border-radius: 0;
   width: 190px;
   box-sizing: border-box;
   padding: 3px 0;
   border-bottom: 2px solid #74819c;
+
+  &:hover,
+  &:focus {
+    border-bottom: 2px solid $crimson;
+  }
+}
+
+.order input:first-child {
+  margin-right: 30px;
 }
 
 .order__inputs {
   margin-bottom: 29px;
   display: flex;
-  justify-content: space-between;
 }
 
 .order input::placeholder,
@@ -64,7 +79,7 @@
 }
 
 @media (max-width: $tablet-width) {
-  .order {
+  .order-wrapper {
     width: 768px;
     padding: 70px 21.4% 70px 17.3%;
   }
@@ -81,6 +96,10 @@
     border-bottom: 2px solid #74819c;
   }
 
+  .order input:first-child {
+    margin-right: 59px;
+  }
+
   .order__button {
     width: 472px;
     height: 52px;
@@ -88,9 +107,10 @@
 }
 
 @media (max-width: $mobile-width) {
-  .order {
+  .order-wrapper {
     width: 320px;
     padding: 70px 15px 70px 15px;
+    margin: 0 auto;
   }
 
   .order h2 {
