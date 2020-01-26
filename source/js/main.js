@@ -14,7 +14,7 @@ if (anchor) {
 }
 // trainers-slider
 
-$(document).ready(function() {
+$(document).ready(function () {
   $('.trainers__list').slick({
     infinite: false,
     speed: 350,
@@ -23,27 +23,27 @@ $(document).ready(function() {
     nextArrow: document.querySelector('.trainers__switch--next'),
     prevArrow: document.querySelector('.trainers__switch--prev'),
     responsive: [
-        {
-          breakpoint: 1199,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2
-          }
-        },
-        {
-          breakpoint: 767,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
+      {
+        breakpoint: 1199,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
         }
-      ]
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   });
 });
 
 // feedback-slider
 
-$(document).ready(function() {
+$(document).ready(function () {
   $('.feedback__list').slick({
     infinite: false,
     speed: 350,
@@ -96,7 +96,7 @@ var membershipLink = document.querySelector('.membership__link');
 var membershipLinkActive = document.querySelector('.membership__link--active');
 
 if (membershipItem || membershipButton) {
-  membershipItem.addEventListener("focus", function (e) {
+  membershipItem.addEventListener('focus', function (e) {
     e.preventDefault();
     membershipItemActive.classList.remove('membership__item--active');
     membershipButtonActive.classList.remove('membership__button--active');
@@ -104,14 +104,14 @@ if (membershipItem || membershipButton) {
 }
 
 if (membershipLink) {
-  membershipLink.addEventListener("focus", function (e) {
+  membershipLink.addEventListener('focus', function (e) {
     e.preventDefault();
     membershipLinkActive.classList.remove('membership__link--active');
   }, true);
 }
 
 if (membershipItem || membershipButton) {
-  membershipItem.addEventListener("click", function (e) {
+  membershipItem.addEventListener('click', function (e) {
     e.preventDefault();
     membershipItemActive.classList.remove('membership__item--active');
     membershipButtonActive.classList.remove('membership__button--active');
@@ -119,8 +119,22 @@ if (membershipItem || membershipButton) {
 }
 
 if (membershipLink) {
-  membershipLink.addEventListener("click", function (e) {
+  membershipLink.addEventListener('click', function (e) {
     e.preventDefault();
     membershipLinkActive.classList.remove('membership__link--active');
   }, true);
 }
+
+// lazy
+
+var blazy = new Blazy({
+  selector: 'img' || '.b-lazy',
+  breakpoints:[{
+    width: 1199,
+    src: 'data-tablet-src'
+  },
+  {
+    width: 767,
+    src: 'data-mobile-src'
+  }]
+});

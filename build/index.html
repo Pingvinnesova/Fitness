@@ -9,11 +9,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Фитнес-центр SUPERGYM</title>
   <link rel="stylesheet" href="css/style.min.css">
-<!--   <link rel="preload" href="/fonts/BebasNeueBold.woff2" as="font">
+  <link rel="preload" href="/fonts/BebasNeueBold.woff2" as="font">
   <link rel="preload" href="/fonts/BebasNeueBold.woff2" as="font">
   <link rel="preload" href="/fonts/RobotoCondensedRegular.woff2" as="font">
-  <link rel="preload" href="/fonts/RobotoCondensedBold.woff2" as="font"> -->
-  <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+  <link rel="preload" href="/fonts/RobotoCondensedBold.woff2" as="font">
 </head>
 <body>
   <div class="full-wrapper">
@@ -55,17 +54,17 @@
           </div>
           <div class="gym__image">
             <picture>
-              <source type="image/webp" media="(max-width: 767px)" srcset="img/gym-mobile@1x.webp 1x, img/gym-mobile@2x.webp 2x">
-              <source type="image/webp" media="(max-width: 1199px)" srcset="img/gym-tablet@1x.webp 1x, img/gym-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/gym-desktop@1x.webp 1x, img/gym-desktop@2x.webp 2x">
-              <source media="(max-width: 767px)" srcset="img/gym-mobile@1x.jpg 1x, img/gym-mobile@2x.jpg 2x">
-              <source media="(max-width: 1199px)" srcset="img/gym-tablet@1x.jpg 1x, img/gym-tablet@2x.jpg 2x">
+              <source type="image/webp" media="(max-width: 767px)" data-mobile-srcset="img/gym-mobile@1x.webp 1x, img/gym-mobile@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1199px)" data-tablet-srcset="img/gym-tablet@1x.webp 1x, img/gym-tablet@2x.webp 2x">
+              <source type="image/webp" data-srcset="img/gym-desktop@1x.webp 1x, img/gym-desktop@2x.webp 2x">
+              <source media="(max-width: 767px)" data-mobile-srcset="img/gym-mobile@1x.jpg 1x, img/gym-mobile@2x.jpg 2x">
+              <source media="(max-width: 1199px)" data-tablet-srcset="img/gym-tablet@1x.jpg 1x, img/gym-tablet@2x.jpg 2x">
 
-              <img src="img/gym-desktop@1x.jpg" srcset="img/gym-desktop@2x.jpg 2x" alt="Тренажёрный зал">
+              <img data-src="img/gym-desktop@1x.jpg" data-srcset="img/gym-desktop@2x.jpg 2x" alt="Тренажёрный зал">
             </picture>
           </div>
         </div>
-        <div class="gym__video">
+        <div class="gym__video b-lazy" data-src="img/video-desktop@1x.jpg" data-srcset="img/video-desktop@2x.jpg 2x" data-tablet-src="img/video-tablet@1x.jpg" data-tablet-srcset="img/video-tablet@2x.jpg 2x" data-mobile-src="img/video-mobile@1x.jpg" data-mobile-srcset="img/video-mobile@2x.jpg 2x">
           <button class="gym__play-btn" type="button">
             <span class="visually-hidden">Воспроизвести видео</span>
           </button>
@@ -124,13 +123,13 @@
             </div>
             <div class="advertizing__image">
               <picture>
-              <source type="image/webp" media="(max-width: 767px)" srcset="img/super-games-mobile@1x.webp 1x, img/super-games-mobile@2x.webp 2x">
-              <source type="image/webp" media="(max-width: 1199px)" srcset="img/super-games-tablet@1x.webp 1x, img/super-games-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/super-games-desktop@1x.webp 1x, img/super-games-desktop@2x.webp 2x">
-              <source media="(max-width: 767px)" srcset="img/super-games-mobile@1x.jpg 1x, img/super-games-mobile@2x.jpg 2x">
-              <source media="(max-width: 1199px)" srcset="img/super-games-tablet@1x.jpg 1x, img/super-games-tablet@2x.jpg 2x">
+              <source type="image/webp" media="(max-width: 767px)" data-mobile-srcset="img/super-games-mobile@1x.webp 1x, img/super-games-mobile@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1199px)" data-tablet-srcset="img/super-games-tablet@1x.webp 1x, img/super-games-tablet@2x.webp 2x">
+              <source type="image/webp" data-srcset="img/super-games-desktop@1x.webp 1x, img/super-games-desktop@2x.webp 2x">
+              <source media="(max-width: 767px)" data-mobile-srcset="img/super-games-mobile@1x.jpg 1x, img/super-games-mobile@2x.jpg 2x">
+              <source media="(max-width: 1199px)" data-tablet-srcset="img/super-games-tablet@1x.jpg 1x, img/super-games-tablet@2x.jpg 2x">
 
-              <img src="img/super-games-desktop@1x.jpg" srcset="img/super-games-desktop@2x.jpg 2x" alt="Соревнование по CrossFit">
+              <img data-src="img/super-games-desktop@1x.jpg" data-srcset="img/super-games-desktop@2x.jpg 2x" alt="Соревнование по CrossFit">
               </picture>
             </div>
           </div>
@@ -143,8 +142,8 @@
           <ul class="trainers__list">
             <li class="trainers__item" tabindex="0">
               <picture>
-                <source type="image/webp" srcset="img/trainer-1-desktop@1x.webp 1x, img/trainer-1-desktop@2x.webp 2x">
-                <img src="img/trainer-1-desktop@1x.jpg" srcset="img/trainer-1-deskto@2x.jpg 2x" alt="Тренер Анна Павлова">
+                <source type="image/webp" data-srcset="img/trainer-1-desktop@1x.webp 1x, img/trainer-1-desktop@2x.webp 2x">
+                <img data-src="img/trainer-1-desktop@1x.jpg" data-srcset="img/trainer-1-deskto@2x.jpg 2x" alt="Тренер Анна Павлова">
               </picture>
               <h3>Анна Павлова</h3>
               <div class="trainers__name">
@@ -159,8 +158,8 @@
             </li>
             <li class="trainers__item" tabindex="0">
               <picture>
-                <source type="image/webp" srcset="img/trainer-2-desktop@1x.webp 1x, img/trainer-2-desktop@2x.webp 2x">
-                <img src="img/trainer-2-desktop@1x.jpg" srcset="img/trainer-2-deskto@2x.jpg 2x" alt="Тренер Алексей Лавров">
+                <source type="image/webp" data-srcset="img/trainer-2-desktop@1x.webp 1x, img/trainer-2-desktop@2x.webp 2x">
+                <img data-src="img/trainer-2-desktop@1x.jpg" data-srcset="img/trainer-2-deskto@2x.jpg 2x" alt="Тренер Алексей Лавров">
               </picture>
               <h3>Алексей Лавров</h3>
               <div class="trainers__name">
@@ -175,8 +174,8 @@
             </li>
             <li class="trainers__item" tabindex="0">
               <picture>
-                <source type="image/webp" srcset="img/trainer-3-desktop@1x.webp 1x, img/trainer-3-desktop@2x.webp 2x">
-                <img src="img/trainer-3-desktop@1x.jpg" srcset="img/trainer-3-deskto@2x.jpg 2x" alt="Тренер Александр Пашков">
+                <source type="image/webp" data-srcset="img/trainer-3-desktop@1x.webp 1x, img/trainer-3-desktop@2x.webp 2x">
+                <img data-src="img/trainer-3-desktop@1x.jpg" data-srcset="img/trainer-3-deskto@2x.jpg 2x" alt="Тренер Александр Пашков">
               </picture>
               <h3>Александр Пашков</h3>
               <div class="trainers__name">
@@ -191,8 +190,8 @@
             </li>
             <li class="trainers__item" tabindex="0">
               <picture>
-                <source type="image/webp" srcset="img/trainer-4-desktop@1x.webp 1x, img/trainer-4-desktop@2x.webp 2x">
-                <img src="img/trainer-4-desktop@1x.jpg" srcset="img/trainer-4-deskto@2x.jpg 2x" alt="Тренер Мария Кетова">
+                <source type="image/webp" data-srcset="img/trainer-4-desktop@1x.webp 1x, img/trainer-4-desktop@2x.webp 2x">
+                <img data-src="img/trainer-4-desktop@1x.jpg" data-srcset="img/trainer-4-deskto@2x.jpg 2x" alt="Тренер Мария Кетова">
               </picture>
               <h3>Мария Кетова</h3>
               <div class="trainers__name">
@@ -205,10 +204,10 @@
                 </ul>
               </div>
             </li>
-                        <li class="trainers__item" tabindex="0">
+            <li class="trainers__item" tabindex="0">
               <picture>
-                <source type="image/webp" srcset="img/trainer-1-desktop@1x.webp 1x, img/trainer-1-desktop@2x.webp 2x">
-                <img src="img/trainer-1-desktop@1x.jpg" srcset="img/trainer-1-deskto@2x.jpg 2x" alt="Тренер Анна Павлова">
+                <source type="image/webp" data-srcset="img/trainer-1-desktop@1x.webp 1x, img/trainer-1-desktop@2x.webp 2x">
+                <img data-src="img/trainer-1-desktop@1x.jpg" data-srcset="img/trainer-1-deskto@2x.jpg 2x" alt="Тренер Анна Павлова">
               </picture>
               <h3>Анна Павлова</h3>
               <div class="trainers__name">
@@ -223,8 +222,8 @@
             </li>
             <li class="trainers__item" tabindex="0">
               <picture>
-                <source type="image/webp" srcset="img/trainer-2-desktop@1x.webp 1x, img/trainer-2-desktop@2x.webp 2x">
-                <img src="img/trainer-2-desktop@1x.jpg" srcset="img/trainer-2-deskto@2x.jpg 2x" alt="Тренер Алексей Лавров">
+                <source type="image/webp" data-srcset="img/trainer-2-desktop@1x.webp 1x, img/trainer-2-desktop@2x.webp 2x">
+                <img data-src="img/trainer-2-desktop@1x.jpg" data-srcset="img/trainer-2-deskto@2x.jpg 2x" alt="Тренер Алексей Лавров">
               </picture>
               <h3>Алексей Лавров</h3>
               <div class="trainers__name">
@@ -239,8 +238,8 @@
             </li>
             <li class="trainers__item" tabindex="0">
               <picture>
-                <source type="image/webp" srcset="img/trainer-3-desktop@1x.webp 1x, img/trainer-3-desktop@2x.webp 2x">
-                <img src="img/trainer-3-desktop@1x.jpg" srcset="img/trainer-3-deskto@2x.jpg 2x" alt="Тренер Александр Пашков">
+                <source type="image/webp" data-srcset="img/trainer-3-desktop@1x.webp 1x, img/trainer-3-desktop@2x.webp 2x">
+                <img data-src="img/trainer-3-desktop@1x.jpg" data-srcset="img/trainer-3-desktop@2x.jpg 2x" alt="Тренер Александр Пашков">
               </picture>
               <h3>Александр Пашков</h3>
               <div class="trainers__name">
@@ -255,8 +254,8 @@
             </li>
             <li class="trainers__item" tabindex="0">
               <picture>
-                <source type="image/webp" srcset="img/trainer-4-desktop@1x.webp 1x, img/trainer-4-desktop@2x.webp 2x">
-                <img src="img/trainer-4-desktop@1x.jpg" srcset="img/trainer-4-deskto@2x.jpg 2x" alt="Тренер Мария Кетова">
+                <source type="image/webp" data-srcset="img/trainer-4-desktop@1x.webp 1x, img/trainer-4-desktop@2x.webp 2x">
+                <img data-src="img/trainer-4-desktop@1x.jpg" data-srcset="img/trainer-4-desktop@2x.jpg 2x" alt="Тренер Мария Кетова">
               </picture>
               <h3>Мария Кетова</h3>
               <div class="trainers__name">
@@ -279,8 +278,8 @@
           <li class="advantages__item advantages__item--square">
             <div class="advantages__image advantages__image--square">
               <picture>
-                <source media="(max-width: 767px)" srcset="img/number-900-mobile.svg">
-                <img src="img/number-900.svg" width="108" height="75" alt="900 кв/м">
+                <source media="(max-width: 767px)" data-srcset="img/number-900-mobile.svg">
+                <img data-src="img/number-900.svg" width="108" height="75" alt="900 кв/м">
               </picture>
             </div>
             <div class="advantages__description">
@@ -291,8 +290,8 @@
           <li class="advantages__item  advantages__item--comfort">
             <div class="advantages__image advantages__image--comfort">
               <picture>
-                <source media="(max-width: 767px)" srcset="img/number-350-mobile.svg">
-                <img src="img/number-350.svg" width="108" height="75" alt="350 мест">
+                <source media="(max-width: 767px)" data-srcset="img/number-350-mobile.svg">
+                <img data-src="img/number-350.svg" width="108" height="75" alt="350 мест">
               </picture>
             </div>
             <div class="advantages__description">
@@ -310,8 +309,8 @@
           <li class="advantages__item advantages__item--cars">
             <div class="advantages__image advantages__image--cars">
               <picture>
-                <source media="(max-width: 767px)" srcset="img/number-70-mobile.svg">
-                <img src="img/number-70.svg" width="72" height="75" alt="70 машин">
+                <source media="(max-width: 767px)" data-srcset="img/number-70-mobile.svg">
+                <img data-src="img/number-70.svg" width="72" height="75" alt="70 машин">
               </picture>
             </div>
             <div class="advantages__description">
@@ -322,8 +321,8 @@
           <li class="advantages__item advantages__item--experience">
             <div class="advantages__image advantages__image--experience">
               <picture>
-                <source media="(max-width: 767px)" srcset="img/number-5-mobile.svg">
-                <img src="img/number-5.svg" width="70" height="74" alt="5+ лет">
+                <source media="(max-width: 767px)" data-srcset="img/number-5-mobile.svg">
+                <img data-src="img/number-5.svg" width="70" height="74" alt="5+ лет">
               </picture>
             </div>
             <div class="advantages__description">
@@ -336,7 +335,7 @@
       <section class="discount">
         <h2>Акции</h2>
         <div class="discount__container">
-          <div class="discount__info">
+          <div class="discount__info b-lazy" data-src="girl-desktop@1x.jpg" data-srcset="img/girl-desktop@2x.jpg 2x" data-tablet-src="girl-tablet@1x.jpg" data-tablet-srcset="img/girl-tablet@2x.jpg 2x" data-mobile-src="girl-mobile@1x.jpg" data-mobile-srcset="img/girl-mobile@2x.jpg 2x">
             <p>Год</p>
             <p>4999</p>
             <h3>Безлимитный абонемент в тренажерный зал</h3>
@@ -365,8 +364,8 @@
                 <div class="feedback__author">
                   <div class="feedback__avatar">
                     <picture>
-                      <source type="image/webp" srcset="img/feedback-icon-desktop@1x.webp 1x, img/feedback-icon-desktop@2x.webp 2x">
-                      <img src="img/feedback-icon-desktop@1x.png" srcset="img/feedback-icon-desktop@1x.png 2x" alt="Аватар Анны Орловы">
+                      <source type="image/webp" data-srcset="img/feedback-icon-desktop@1x.webp 1x, img/feedback-icon-desktop@2x.webp 2x">
+                      <img data-src="img/feedback-icon-desktop@1x.png" data-srcset="img/feedback-icon-desktop@1x.png 2x" alt="Аватар Анны Орловы">
                     </picture>
                   </div>
                 </div>
@@ -379,8 +378,8 @@
                 <div class="feedback__author">
                   <div class="feedback__avatar">
                     <picture>
-                      <source type="image/webp" srcset="img/feedback-icon-desktop@1x.webp 1x, img/feedback-icon-desktop@2x.webp 2x">
-                      <img src="img/feedback-icon-desktop@1x.png" srcset="img/feedback-icon-desktop@1x.png 2x" alt="Аватар Анны Орловы">
+                      <source type="image/webp" data-srcset="img/feedback-icon-desktop@1x.webp 1x, img/feedback-icon-desktop@2x.webp 2x">
+                      <img data-src="img/feedback-icon-desktop@1x.png" data-srcset="img/feedback-icon-desktop@1x.png 2x" alt="Аватар Анны Орловы">
                     </picture>
                   </div>
                 </div>
@@ -396,8 +395,10 @@
           <div class="order-wrapper">
           <h2>Бесплатное занятие</h2>
           <div class="order__inputs">
-            <input type="text" name="name" placeholder="Имя" required="">
-            <input type="tel" name="tel" placeholder="Телефон" maxlength="10" required="">
+            <label for="order__name"><span class="visually-hidden">Как вас зовут?</span></label>
+            <input id="order__name" type="text" name="name" placeholder="Имя" required="">
+            <label for="order__tel"><span class="visually-hidden">Как вас зовут?</span></label>
+            <input id="order__tel" type="tel" name="tel" placeholder="Телефон" maxlength="10" required="">
           </div>
           <button class="order__button" type="submit">Отправить</button>
         </div>
@@ -444,19 +445,19 @@
         <ul class="footer__social social">
           <li class="social__item">
             <a class="social__link social__link--vk" href="https://vkontakte.ru/">
-              <img src="img/icon-vk.svg" alt="Иконка vkontakte">
+              <img data-src="img/icon-vk.svg" alt="Иконка vkontakte">
               <span class="visually-hidden">Мы в Vkontakte</span>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--ig" href="https://instagram.com/">
-              <img src="img/icon-insta.svg" alt="Иконка instagram">
+              <img data-src="img/icon-insta.svg" alt="Иконка instagram">
               <span class="visually-hidden">Мы в Instagram</span>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--fb" href="https://facebook.com/">
-              <img src="img/icon-fb.svg" alt="Иконка facebook">
+              <img data-src="img/icon-fb.svg" alt="Иконка facebook">
               <span class="visually-hidden">Мы в Facebook</span>
             </a>
           </li>
@@ -464,7 +465,9 @@
       </div>
     </footer>
   </div>
-<script src="js/vendor.js"></script>
+<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+<!-- <script src="js/blazy.min.js"></script> -->
+<script src="js/vendor.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
