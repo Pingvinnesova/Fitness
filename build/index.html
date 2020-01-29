@@ -394,7 +394,7 @@
             <label for="order__name"><span class="visually-hidden">Как вас зовут?</span></label>
             <input id="order__name" type="text" name="name" placeholder="Имя" required="">
             <label for="order__tel"><span class="visually-hidden">Как вас зовут?</span></label>
-            <input id="order__tel" type="tel" name="tel" placeholder="Телефон" maxlength="10" required="">
+            <input id="order__tel" type="tel" name="phone" placeholder="Телефон" minlength="8" maxlength="15" required="">
           </div>
           <button class="order__button" type="submit">Отправить</button>
         </div>
@@ -411,6 +411,10 @@
               <div class="info__item info__item--time">
                 <h3>График работы:</h3>
                 <p>Пн-Вс: с 8:00 до 22:00</p>
+              </div>
+              <div class="info__item info__item--adress">
+                <h3>Адрес:</h3>
+                <p>г. Омск, ул. 60 лет Октября, 7</p>
               </div>
             </div>
             <div class="info__container">

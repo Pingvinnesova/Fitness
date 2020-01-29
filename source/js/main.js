@@ -138,3 +138,27 @@ var blazy = new Blazy({
     src: 'data-mobile-src'
   }]
 });
+
+// input
+
+var orderTel = document.getElementById('order__tel');
+
+if (orderTel) {
+  orderTel.onkeydown = function (e) {
+      return !(/^[А-Яа-яA-Za-z ]$/.test(e.key));
+  }
+}
+
+if (orderTel) {
+orderTel.addEventListener('invalid', function () {
+  if (orderTel.validity.tooShort) {
+    orderTel.setCustomValidity('Телефон должен состоять минимум из 8-ми символов');
+  } else if (orderTelt.validity.tooLong) {
+    orderTel.setCustomValidity('Телефон не должен превышать 15-ть символов');
+  } else if (orderTel.validity.valueMissing) {
+    orderTel.setCustomValidity('Обязательное поле');
+  } else {
+    orderTel.setCustomValidity('');
+  }
+});
+}

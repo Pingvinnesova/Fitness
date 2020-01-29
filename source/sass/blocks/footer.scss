@@ -17,6 +17,7 @@
 .footer__nav {
   @include list-reset;
   display: flex;
+  flex-wrap: wrap;
   width: 480px;
   align-items: center;
   justify-content: flex-start;
@@ -25,6 +26,7 @@
 
 .footer__nav-item {
   margin-right: 40px;
+  margin-bottom: 10px;
 }
 
 .footer__nav-item:last-child {
@@ -47,6 +49,7 @@
 .footer__social {
   @include list-reset;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: flex-end;
 }
