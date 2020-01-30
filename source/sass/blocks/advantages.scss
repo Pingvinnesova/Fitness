@@ -44,47 +44,100 @@
 }
 
 .advantages__item {
-  width: 340px;
-  height: 250px;
+  width: 350px;
+  // height: 250px;
   display: flex;
   box-sizing: border-box;
-  margin-bottom: 20px;
+  // margin-bottom: 20px;
 }
 
 // .advantages__item--experience {
 //   margin-left: calc(100% - 2 *340px);
 // }
 
+// .advantages__item:nth-of-type(2n) {
+//   margin-left: calc(100% - 2 *350px);
+// }
+
+.advantages__image--square {
+  padding-left: 27px;
+  padding-right: 31px;
+}
+
+.advantages__image--comfort {
+  padding-left: 21px;
+  padding-right: 29px;
+}
+
+.advantages__item--comfort {
+  padding-top: 77px;
+}
+
+.advantages__image--experience {
+  padding-left: 11px;
+  padding-right: 33px;
+}
+
+.advantages__item--experience {
+  padding-top: 77px;
+}
+
+.advantages__item--experience div:last-child {
+  width: 235px;
+}
+
+.advantages__item--comfort div:last-child {
+  width: 194px;
+}
+
+.advantages__item--square {
+  padding-bottom: 78px;
+}
+
+.advantages__image--cars {
+  padding-left: 11px;
+  padding-right: 30px;
+}
+
+.advantages__item--cars div:last-child {
+  flex-direction: column;
+  width: 230px;
+}
+
+
 
 
 
 .advantages__item:nth-of-type(2n+1) {
-  margin-left: calc(100% - 2 *340px);
+  margin-left: calc(100% - 2 *350px);
 }
 
-.advantages__item--trainers {
-  margin-left: 0;
-  position: absolute;
-  width: 240px;
-  height: 100%;
-  top: 50%;
-  left: 5%;
-  transform: translate(-5%, -50%);
+.advantages__item:nth-of-type(3n) {
+  margin-left: calc(100% - 2 *350px);
+}
 
+
+
+
+.advantages__item--trainers {
+  position: absolute;
+  margin: 0;
+  width: 240px;
+  box-sizing: border-box;
+  padding: 39px 27px 57px 27px;
+  top: 0;
+  left: 7.5%;
+  transform: translateX(-7.5%);
   background-color: $dark-blue;
   display: flex;
   flex-direction: column;
 }
 
-// .advantages__item:nth-of-type(3n) {
-//   margin-left: calc(100% - 2 *340px);
-// }
-
-
 .advantages__description {
-  flex-direction: column;
-  width: 191px;
+  width: 177px;
 }
+
+
 
 // .advantages__item--cars div:last-child {
 //   width: 242px;
@@ -215,6 +268,15 @@
     width: 339px;
     height: auto;
     padding-bottom: 44px;
+    margin: 0;
+  }
+
+  .advantages__item:nth-of-type(2n+1) {
+    margin-left: 0;
+  }
+
+  .advantages__item:nth-of-type(3n) {
+    margin-left: 0;
   }
 
   .advantages__item--square,
@@ -222,15 +284,6 @@
     &::after {
       display: none;
     }
-  }
-
-  .advantages__item--trainers {
-    order: 3;
-    width: 442px;
-    height: 239px;
-    padding: 14px 126px;
-    margin: 0 118px;
-    margin-bottom: 43px;
   }
 
   .advantages__item--trainers h3 {
@@ -265,7 +318,7 @@
     padding-top: 5px;
     width: 89px;
     height: 60px;
-    margin-right: 29px;
+    margin-right: 0;
   }
 
   .advantages__image--comfort {
@@ -295,6 +348,18 @@
   .advantages__note {
     font-size: 22px;
     line-height: 33px;
+  }
+
+  .advantages__item:first-of-type {
+    position: static;
+    order: 3;
+    width: 442px;
+    padding: 14px 126px;
+    padding-bottom: 43px;
+    margin-left: 118px;
+        // margin: 0 118px;
+    margin-bottom: 43px;
+    transform: translateX(0);
   }
 }
 
@@ -345,7 +410,7 @@
     margin: 0 auto;
   }
 
-  .advantages__item--trainers {
+  .advantages__item:first-of-type {
     order: 3;
     width: 320px;
     height: 239px;

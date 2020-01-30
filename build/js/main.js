@@ -24,7 +24,7 @@ $(document).ready(function () {
     prevArrow: document.querySelector('.trainers__switch--prev'),
     responsive: [
       {
-        breakpoint: 1199,
+        breakpoint: 1201,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2

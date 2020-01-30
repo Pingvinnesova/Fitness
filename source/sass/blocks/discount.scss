@@ -1,6 +1,5 @@
 .discount {
-  padding: 120px 0;
-  padding-top: 116px;
+  padding: 116px 0 60px 0;
   width: 100%;
   background-color: $white;
 }
@@ -23,7 +22,6 @@
   width: 560px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .discount__info h3 {
@@ -89,7 +87,7 @@
   padding-bottom: 44px;
   box-sizing: border-box;
   width: 560px;
-  height: 462px;
+  // height: 462px;
   background-color: $crimson;
   background-image: url("../img/girl-desktop@1x.jpg");
   background-repeat: no-repeat;
@@ -101,14 +99,19 @@
   }
 }
 
-.discount__item {
+.discount__list li {
   width: 560px;
-  height: 211px;
+  // height: 211px;
   padding: 23px 10px 27px 27px;
   box-sizing: border-box;
   border: 7px solid transparent;
   border-image: linear-gradient(-111.72deg, #ed0233 17.6%, #003eb7 95.31%);
   border-image-slice: 1;
+  margin-bottom: 40px;
+}
+
+.discount__list li:last-child {
+  margin-bottom: 0;
 }
 
 .discount__list h3 {
@@ -162,7 +165,7 @@
 @media (max-width: $tablet-width) {
   .discount {
     padding-top: 100px;
-    padding-bottom: 98px;
+    padding-bottom: 39px;
   }
 
   .discount h2 {
@@ -178,7 +181,7 @@
   .discount__list {
     width: 678px;
     flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .discount__info {
@@ -189,7 +192,6 @@
     margin-bottom: 30px;
     box-sizing: border-box;
     width: 678px;
-    height: 462px;
     background-image: url("../img/girl-tablet@1x.jpg");
     background-repeat: no-repeat;
     background-size: 399px 462px;
@@ -200,21 +202,31 @@
     }
   }
 
-  .discount__item {
+  .discount__list li {
     width: 324px;
-    height: 211px;
     padding: 23px 10px 24px 27px;
     box-sizing: border-box;
     border: 7px solid transparent;
     border-image: linear-gradient(-111.72deg, #ed0233 17.6%, #003eb7 95.31%);
     border-image-slice: 1;
+    margin-bottom: 20px;
+    margin-right: 30px;
   }
 
-  .discount__item p {
+  .discount__list li:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  .discount__list li:first-child,
+  .discount__list li:last-child {
+    margin-bottom: 20px;
+  }
+
+  .discount__list p {
     margin-bottom: 68px;
   }
 
-  .discount__item--free p {
+  .discount__item:first-child p {
     width: 165px;
     margin-bottom: 46px;
   }
@@ -223,7 +235,7 @@
 @media (max-width: $mobile-width) {
   .discount {
     padding-top: 69px;
-    padding-bottom: 41px;
+    padding-bottom: 21px;
   }
 
   .discount h2 {
@@ -237,17 +249,26 @@
     justify-content: space-between;
   }
 
+  .discount__list li {
+    width: 290px;
+    padding: 32px 27px 24px 27px;
+  }
+
+  .discount__list li:first-child,
+  .discount__list li:last-child {
+    margin-bottom: 28px;
+  }
+
   .discount__info {
     display: flex;
     flex-direction: column;
     padding-right: 0;
     padding-left: 0;
     padding-top: 33px;
-    padding-bottom: 44px;
+    padding-bottom: 345px;
     margin-bottom: 30px;
     box-sizing: border-box;
     width: 290px;
-    height: 598px;
     background-image: url("../img/girl-mobile@1x.jpg");
     background-repeat: no-repeat;
     background-size: 290px 299px;
@@ -293,7 +314,7 @@
     border-image-slice: 1;
   }
 
-  .discount__item--fitness p {
+  .discount__list:last-child p {
     width: 161px;
     margin-bottom: 30px;
   }

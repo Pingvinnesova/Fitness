@@ -2,7 +2,7 @@
   position: relative;
   width: 678px;
   margin: 0 auto;
-  padding: 0 45px;
+  padding: 60px 45px 0 45px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -75,27 +75,33 @@
   background-image: url("../img/icon-prev.svg");
   background-size: 16px 32px;
   background-position: center center;
-
-  &:hover,
-  &:focus {
-    background-color: $dark-blue;
-  }
 }
 
 .feedback__switch--prev {
   left: 45px;
-  bottom: 221px;
+  top: 263px;
+
+  &:hover,
+  &:focus {
+    background-image: url("../img/icon-prev-crimson.svg");
+  }
 }
 
 .feedback__switch--next {
   transform: rotate(180deg);
   right: 45px;
-  bottom: 221px;
+  top: 263px;
+
+  &:hover,
+  &:focus {
+    background-image: url("../img/icon-prev-crimson.svg");
+  }
 }
 
 @media (max-width: $tablet-width) {
   .feedback {
     margin-bottom: 0;
+    padding-top: 43px;
     padding-bottom: 85px;
   }
 
@@ -113,11 +119,11 @@
   }
 
   .feedback__switch--prev {
-    bottom: 200px;
+    top: 227px;
   }
 
   .feedback__switch--next {
-    bottom: 200px;
+    top: 227px;
   }
 }
 
@@ -126,9 +132,8 @@
     position: relative;
     width: 320px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 20px 15px 55px 15px;
     box-sizing: border-box;
-    padding-bottom: 55px;
   }
 
   .feedback__list {
@@ -188,12 +193,14 @@
   }
 
   .feedback__switch--prev {
-    left: 15px;
-    bottom: 220px;
+    left: 11px;
+    top: 244px;
+    background-size: 10px auto;
   }
 
   .feedback__switch--next {
-    right: 15px;
-    bottom: 220px;
+    right: 11px;
+    top: 244px;
+    background-size: 10px auto;
   }
 }
