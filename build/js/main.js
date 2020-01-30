@@ -92,8 +92,8 @@ var membershipItem = document.querySelector('.membership__item');
 var membershipButton = document.querySelector('.membership__button');
 var membershipItemActive = document.querySelector('.membership__item--active');
 var membershipButtonActive = document.querySelector('.membership__button--active');
-var membershipLink = document.querySelector('.membership__link');
-var membershipLinkActive = document.querySelector('.membership__link--active');
+var membershipLink = document.querySelector('.membership__months li');
+var membershipLinkActive = document.querySelector('.membership__active-link');
 
 if (membershipItem || membershipButton) {
   membershipItem.addEventListener('focus', function (e) {
@@ -103,12 +103,12 @@ if (membershipItem || membershipButton) {
   }, true);
 }
 
-if (membershipLink) {
-  membershipLink.addEventListener('focus', function (e) {
-    e.preventDefault();
-    membershipLinkActive.classList.remove('membership__link--active');
-  }, true);
-}
+// if (membershipLink) {
+//   membershipLink.addEventListener('focus', function (e) {
+//     e.preventDefault();
+//     membershipLinkActive.classList.remove('membership__link--active');
+//   }, true);
+// }
 
 if (membershipItem || membershipButton) {
   membershipItem.addEventListener('click', function (e) {
@@ -118,12 +118,27 @@ if (membershipItem || membershipButton) {
   }, true);
 }
 
+
+// membership__active-link
+
 if (membershipLink) {
-  membershipLink.addEventListener('click', function (e) {
-    e.preventDefault();
-    membershipLinkActive.classList.remove('membership__link--active');
-  }, true);
+  membershipLinkActive.focus();
 }
+
+//   membershipLink.addEventListener('click', function (e) {
+//     console.log('тык');
+//     e.preventDefault();
+//     membershipLinkActive.classList.remove('membership__link--active');
+//     // membershipLink.classList.add('membership__link--active');
+//   }, true);
+
+//   membershipLink.addEventListener('focus', function (e) {
+//     console.log('focus');
+//     e.preventDefault();
+//     membershipLinkActive.classList.remove('membership__link--active');
+//     // membershipLink.classList.add('membership__link--active');
+//   }, true);
+
 
 // lazy
 

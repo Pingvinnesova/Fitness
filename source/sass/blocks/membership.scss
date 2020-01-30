@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   background-color: $light-grey;
-  padding: 122px 0;
+  padding: 118px 0 107px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,7 +10,7 @@
 
 .membership h2 {
   @include desktop-header;
-  margin-bottom: 25px;
+  margin-bottom: 35px;
 }
 
 .membership__months {
@@ -18,7 +18,6 @@
   display: flex;
 
   @include list-reset;
-  padding-top: 10px;
   margin-bottom: 38px;
   border-bottom: 2px solid rgba(120, 120, 120, 0.2);
 }
@@ -43,8 +42,10 @@
   padding-bottom: 11px;
 
   &:hover,
-  &:focus {
+  &:focus,
+  &:active {
     color: $dark-blue;
+    outline: none;
 
     &::after {
       content: "";
@@ -58,19 +59,19 @@
   }
 }
 
-.membership__link--active {
-  color: $dark-blue;
+// .membership__link--active {
+//   color: $dark-blue;
 
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #d10a42;
-  }
-}
+//   &::after {
+//     content: "";
+//     position: absolute;
+//     bottom: -2px;
+//     left: 0;
+//     width: 100%;
+//     height: 2px;
+//     background-color: #d10a42;
+//   }
+// }
 
 .membership__list {
   position: relative;
@@ -155,6 +156,7 @@
   background: $white;
   padding: 49px 69px 62px 69px;
   margin-right: 3.8%;
+  margin-bottom: 15px;
   border: 7px solid transparent;
   cursor: pointer;
 
@@ -208,7 +210,7 @@
 
   .membership h2 {
     @include tablet-header;
-    margin-bottom: 20px;
+    margin-bottom: 32px;
   }
 
   .membership__link {
@@ -267,12 +269,12 @@
 @media (max-width: $mobile-width) {
   .membership {
     padding-top: 70px;
-    padding-bottom: 26px;
+    padding-bottom: 34px;
   }
 
   .membership h2 {
     @include mobile-header;
-    margin-bottom: 12px;
+    margin-bottom: 21px;
   }
 
   .membership__months {

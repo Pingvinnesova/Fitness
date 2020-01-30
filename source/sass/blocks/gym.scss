@@ -4,14 +4,13 @@
   flex-direction: column;
   max-width: 1366px;
   box-sizing: border-box;
-  padding: 120px 7.5% 218px 7.5%;
+  padding: 120px 7.5% 232px 7.5%;
   margin: 0 auto;
 }
 
 .gym__info-wrapper {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 11px;
 }
 
 .gym__info {
@@ -40,6 +39,10 @@
   margin-bottom: 39px;
 }
 
+.gym__info p:last-of-type {
+  margin-bottom: 0;
+}
+
 .gym__image img {
   width: 660px;
   height: auto;
@@ -53,7 +56,7 @@
 .gym__video {
   position: absolute;
   left: 54%;
-  bottom: 118px;
+  top: 408px;
   transform: translateX(-54%);
   width: 364px;
   height: 228px;
@@ -99,7 +102,7 @@
   .gym {
     width: 768px;
     box-sizing: border-box;
-    padding: 55px 45px 169px 45px;
+    padding: 55px 45px 179px 45px;
   }
 
   .gym__info-wrapper {
@@ -146,7 +149,8 @@
     width: 266px;
     height: 167px;
     left: 50%;
-    bottom: 101px;
+    top: auto;
+    bottom: 100px;
     transform: translateX(-50%);
     background-color: $dark-blue;
     background-image: url("../img/video-tablet@1x.jpg");
@@ -177,7 +181,7 @@
     width: auto;
     box-sizing: border-box;
     padding: 0;
-    padding-bottom: 261px;
+    padding-bottom: 273px;
   }
 
   .gym__info {

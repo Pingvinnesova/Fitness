@@ -25,7 +25,7 @@
   flex-direction: column;
   box-sizing: border-box;
   width: 500px;
-  padding-top: 82px;
+  padding-top: 85px;
   padding-left: 78px;
   padding-right: 77px;
   padding-bottom: 85px;
@@ -86,8 +86,9 @@
 }
 
 .advertizing__image {
+  background-color: #000248;
   width: 660px;
-  height: 500px;
+  min-height: 500px;
 }
 
 .advertizing__image img {
@@ -188,7 +189,7 @@
 
   .advertizing__image {
     width: 386px;
-    height: 292px;
+    min-height: 292px;
   }
 
   .advertizing__image img {
@@ -249,7 +250,7 @@
   .advertizing {
     width: 320px;
     box-sizing: border-box;
-    padding: 80px 15px;
+    padding: 73px 15px;
     padding-bottom: 45px;
     margin: 0 auto;
   }

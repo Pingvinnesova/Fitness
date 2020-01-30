@@ -2,14 +2,15 @@
   display: flex;
   max-width: 1366px;
   box-sizing: border-box;
-  padding: 0 7.5% 51px 7.5%;
+  padding: 82px 7.5% 51px 3.5%;
   margin: 0 auto;
 }
 
 .promo__info {
   display: flex;
+  width: 450px;
   flex-direction: column;
-  padding: 82px 66px 43px 15px;
+  padding: 0 0 43px 0;
 }
 
 .promo__info p {
@@ -29,10 +30,9 @@
 }
 
 .promo__header {
-  position: relative;
-  width: 381px;
   display: flex;
   margin-bottom: 57px;
+  justify-content: flex-end;
 }
 
 .promo__header h1 {
@@ -46,22 +46,21 @@
   text-align: right;
   letter-spacing: 0.03em;
   font-weight: bold;
+  width: 296px;
+  margin-left: -33px;
 }
 
 .promo__header ul {
-  position: absolute;
-  left: 0;
-  bottom: 27px;
   width: 117px;
   order: -1;
 
   @include list-reset;
-  align-self: flex-end;
   color: $white;
   font-family: "RobotoCondensedRegular", "Arial", sans-serif;
   font-size: 14px;
   line-height: 21px;
   text-align: right;
+  padding-top: 129px;
 }
 
 .promo__button {
@@ -115,7 +114,7 @@
   .promo {
     width: 768px;
     box-sizing: border-box;
-    padding: 0 45px 0 45px;
+    padding: 34px 45px 0 4px;
   }
 
   .promo__social {
@@ -129,22 +128,23 @@
   }
 
   .promo__header {
-    width: 325px;
+    width: 366px;
     margin-bottom: 42px;
-  }
-
-  .promo__header ul {
-    left: -4px;
-    bottom: 17px;
   }
 
   .promo__header h1 {
     font-size: 86px;
     line-height: 86px;
+    margin-left: -84px;
   }
 
   .promo__info {
-    padding: 34px 4% 22px 0;
+    width: 366px;
+    padding: 0 0 22px 0;
+  }
+
+  .promo__header ul {
+    padding-top: 93px;
   }
 
   .promo__button {
@@ -167,9 +167,9 @@
 
 @media (max-width: $mobile-width) {
   .promo {
-    width: auto;
+    width: 320px;
     box-sizing: border-box;
-    padding: 0 15px 0 15px;
+    padding: 55px 15px 0 15px;
   }
 
   .promo__image {
@@ -177,18 +177,22 @@
   }
 
   .promo__city {
+    width: 290px;
+    margin: 0 auto;
     font-size: 28px;
     line-height: 28px;
     margin-bottom: 10px;
   }
 
   .promo__header h1 {
+    width: 222px;
     font-size: 78px;
     line-height: 78px;
+    margin-left: -37px;
   }
 
   .promo__header {
-    width: auto;
+    width: 290px;
     margin-bottom: 45px;
   }
 
@@ -196,16 +200,17 @@
     width: 290px;
     margin: 0 auto;
     box-sizing: border-box;
-    padding: 55px 0 22px 0;
+    padding: 0 0 0;
   }
 
   .promo__header ul {
-    bottom: 11px;
+    padding-top: 82px;
   }
 
   .promo__button {
     padding: 19px 31px;
     box-sizing: border-box;
-    width: 100%;
+    width: 290px;
+    align-self: center;
   }
 }
