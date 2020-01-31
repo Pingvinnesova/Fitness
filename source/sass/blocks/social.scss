@@ -26,17 +26,20 @@
 }
 
 @media (max-width: $mobile-width) {
-  .social__link--vk {
+  .social__link--vk,
+  .social__link--vk img {
     width: 32px;
     height: 17px;
   }
 
-  .social__link--ig {
+  .social__link--ig,
+  .social__link--ig img {
     width: 24px;
     height: 22px;
   }
 
-  .social__link--fb {
+  .social__link--fb,
+  .social__link--fb img {
     width: 14px;
     height: 27px;
   }
