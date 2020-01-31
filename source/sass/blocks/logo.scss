@@ -5,6 +5,12 @@
   letter-spacing: 0.02em;
   color: $white;
   text-transform: uppercase;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $crimson;
+  }
 }
 
 @media (max-width: $tablet-width) {

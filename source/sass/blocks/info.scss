@@ -9,9 +9,8 @@
 .info-wrapper {
   display: flex;
   flex-direction: column;
-  width: 548px;
-  box-sizing: border-box;
-  padding: 70px 0 63px 17.9%;
+  width: 425px;
+  padding: 70px 0 47px 18%;
   margin-right: auto;
 }
 
@@ -49,24 +48,50 @@
 }
 
 .info__list {
+  position: relative;
   display: flex;
+  width: 500px;
+  flex-wrap: wrap;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 0.5px;
+    height: 104px;
+    left: 46.5%;
+    top: 6%;
+    transform: translateX(-46.5%);
+    background-color: $dark-blue;
+  }
 }
 
 .info__item {
-  margin-bottom: 19px;
+  width: 233px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
 }
 
-.info__container:first-child {
-  border-right: 1px solid #74819c;
-  margin-right: 59px;
-  padding-right: 63px;
+.info__item:nth-of-type(2n) {
+  padding-left: 27px;
+  margin-left: calc(100% - 2 * 233px);
 }
+
+// .info__item {
+//   margin-bottom: 19px;
+// }
+
+// .info__container:first-child {
+//   border-right: 1px solid #74819c;
+//   margin-right: 59px;
+//   padding-right: 63px;
+// }
 
 @media (max-width: $tablet-width) {
   .info-wrapper {
-    width: 768px;
-    padding: 70px 17.4% 63px 17.4%;
+    width: 472px;
+    padding: 70px 39px 42px 9px;
     border: none;
+    margin: 0 auto;
   }
 
   .info h2 {
@@ -85,9 +110,16 @@
     line-height: 27px;
   }
 
-  .info__container:first-child {
-    margin-right: 47px;
-    padding-right: 48px;
+  .info__item:nth-of-type(2n) {
+    padding-left: 47px;
+  }
+
+  .info__list {
+    &::after {
+      height: 128px;
+      left: 53.5%;
+      transform: translateX(-53.5%);
+    }
   }
 }
 
@@ -95,11 +127,20 @@
   .info-wrapper {
     width: 320px;
     padding: 70px 15px 43px 15px;
+    box-sizing: border-box;
     margin: 0 auto;
   }
 
   .info__list {
+    position: relative;
     flex-direction: column;
+    display: flex;
+    width: 500px;
+    flex-wrap: wrap;
+
+    &::after {
+      display: none;
+    }
   }
 
   .info h2 {
@@ -107,9 +148,30 @@
     margin-bottom: 34px;
   }
 
+  .info__item:nth-of-type(2n) {
+    padding-left: 0;
+    margin-left: 0;
+  }
+
   .info__item--adress,
   .info__item--phone {
     margin-bottom: 0;
+  }
+
+  .info__item--adress {
+    order: 0;
+  }
+
+  .info__item--phone {
+    order: 3;
+  }
+
+  .info__item--time {
+    order: 2;
+  }
+
+  .info__item--email {
+    order: 4;
   }
 
   .info__item {

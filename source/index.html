@@ -60,9 +60,9 @@
             </picture>
           </div>
         </div>
-        <div class="gym__video b-lazy" data-src="img/video-desktop@1x.jpg" data-srcset="img/video-desktop@2x.jpg 2x" data-tablet-src="img/video-tablet@1x.jpg" data-tablet-srcset="img/video-tablet@2x.jpg 2x" data-mobile-src="img/video-mobile@1x.jpg" data-mobile-srcset="img/video-mobile@2x.jpg 2x">
+        <div class="gym__video">
           <button class="gym__play-btn" type="button">
-            <span class="visually-hidden">Воспроизвести видео</span>
+          <span class="visually-hidden">Воспроизвести видео</span>
           </button>
         </div>
       </section>
@@ -262,14 +262,6 @@
       </section>
       <section class="advantages">
         <h2>Наши преимущества</h2>
-<!--         <div class="advantages__points">
-          <div class="advantages__point">
-            <h3>
-              <span class="advantages__number">100</span>
-              <span class="advantages__note">Тренажёров</span>
-            </h3>
-            <p>Современные тренажёры на все группы мышц</p>
-          </div> -->
           <div class="advantages__list">
             <div class="advantages__item advantages__item--trainers">
               <h3>
@@ -405,29 +397,21 @@
           <div class="info-wrapper">
           <h2>Контакты</h2>
           <div class="info__list">
-            <div class="info__container">
-              <div class="info__item info__item--adress">
-                <h3>Адрес:</h3>
-                <p>г. Омск, ул. 60 лет Октября, 7</p>
-              </div>
-              <div class="info__item info__item--time">
-                <h3>График работы:</h3>
-                <p>Пн-Вс: с 8:00 до 22:00</p>
-              </div>
-              <div class="info__item info__item--adress">
-                <h3>Адрес:</h3>
-                <p>г. Омск, ул. 60 лет Октября, 7</p>
-              </div>
+            <div class="info__item info__item--adress">
+              <h3>Адрес:</h3>
+              <p>г. Омск, ул. 60 лет Октября, 7</p>
             </div>
-            <div class="info__container">
-              <div class="info__item info__item--phone">
-                <h3>Телефон:</h3>
-                <p><a href="tel:88005555555">8-800-555-55-55</a></p>
-              </div>
-              <div class="info__item info__item--email">
-                <h3>Email:</h3>
-                <p><a href="mailto:omsk@supergym.ru">omsk@supergym.ru</a></p>
-              </div>
+            <div class="info__item info__item--phone">
+              <h3>Телефон:</h3>
+              <p><a href="tel:88005555555">8-800-555-55-55</a></p>
+            </div>
+            <div class="info__item info__item--time">
+              <h3>График работы:</h3>
+              <p>Пн-Вс: с 8:00 до 22:00</p>
+            </div>
+            <div class="info__item info__item--email">
+              <h3>Email:</h3>
+              <p><a href="mailto:omsk@supergym.ru">omsk@supergym.ru</a></p>
             </div>
           </div>
         </div>
@@ -438,28 +422,28 @@
       <div class="footer__container">
         <a class="footer__logo logo" href="#">Supergym</a>
         <ul class="footer__nav">
-          <li class="footer__nav-item"><a href="#">Услуги</a></li>
+          <li class="footer__nav-item footer__nav--services"><a href="#">Услуги</a></li>
           <li class="footer__nav-item"><a href="#">Абонементы</a></li>
-          <li class="footer__nav-item"><a href="#">Акции</a></li>
-          <li class="footer__nav-item"><a href="#">Тренеры</a></li>
+          <li class="footer__nav-item footer__nav--discount"><a href="#">Акции</a></li>
+          <li class="footer__nav-item footer__nav--trainers"><a href="#">Тренеры</a></li>
           <li class="footer__nav-item"><a href="#">Расписание</a></li>
         </ul>
         <ul class="footer__social social">
           <li class="social__item">
             <a class="social__link social__link--vk" href="https://vkontakte.ru/">
-              <img src="img/loader.gif" data-src="img/icon-vk.svg" alt="Иконка vkontakte">
+              <img src="img/icon-vk.svg" alt="Иконка vkontakte">
               <span class="visually-hidden">Мы в Vkontakte</span>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--ig" href="https://instagram.com/">
-              <img src="img/loader.gif" data-src="img/icon-insta.svg" alt="Иконка instagram">
+              <img src="img/icon-insta.svg" alt="Иконка instagram">
               <span class="visually-hidden">Мы в Instagram</span>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--fb" href="https://facebook.com/">
-              <img src="img/loader.gif" data-src="img/icon-fb.svg" alt="Иконка facebook">
+              <img src="img/icon-fb.svg" alt="Иконка facebook">
               <span class="visually-hidden">Мы в Facebook</span>
             </a>
           </li>
@@ -467,9 +451,7 @@
       </div>
     </footer>
   </div>
-<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
-<!-- <script src="js/blazy.min.js"></script> -->
-<script src="js/vendor.min.js"></script>
-<script src="js/main.js"></script>
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

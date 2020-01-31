@@ -19,7 +19,7 @@
   display: flex;
   flex-wrap: wrap;
   width: 480px;
-  align-items: center;
+  align-self: flex-end;
   justify-content: flex-start;
   padding-left: 73px;
 }
@@ -68,7 +68,7 @@
 }
 
 .footer__logo {
-  padding-top: 3px;
+  align-self: center;
 }
 
 
@@ -79,8 +79,8 @@
   }
 
   .footer__nav {
-    width: 385px;
-    padding-left: 12px;
+    width: 393px;
+    padding-left: 20px;
   }
 
   .footer__nav-item {
@@ -102,36 +102,46 @@
 
   .footer__nav {
     width: 290px;
-    height: 119px;
+    // height: 119px;
     padding-left: 0;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
     margin-bottom: 14px;
   }
 
-  .footer__nav li {
-    margin-bottom: 19px;
-    margin-right: 76px;
-  }
-
-  .footer__nav li:nth-child(3n) {
-    margin-bottom: 0;
-  }
-
   .footer__nav-item {
+    width: 130px;
+    margin-bottom: 19px;
+    box-sizing: border-box;
+    order: 4;
     margin-right: 0;
   }
 
   .footer__nav-item a {
     font-size: 16px;
     line-height: 19px;
+    text-align: left;
   }
 
   .footer__logo {
+    order: 0;
     font-size: 20px;
     line-height: 20px;
     font-family: "BebasNeueBold", "Arial", cursive;
+  }
+
+  .footer__nav--discount {
+    order: 1;
+  }
+
+  .footer__nav--services {
+    order: 2;
+  }
+
+  .footer__nav--trainers {
+    order: 3;
   }
 
   .footer__logo--show {

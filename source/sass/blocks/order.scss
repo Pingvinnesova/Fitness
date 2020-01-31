@@ -6,9 +6,9 @@
 .order-wrapper {
   display: flex;
   flex-direction: column;
-  width: 589px;
-  box-sizing: border-box;
-  padding: 70px 25% 70px 10px;
+  align-items: flex-end;
+  width: 413px;
+  padding: 70px 24.5% 70px 10px;
   margin-left: auto;
   background-color: $dark-blue;
 }
@@ -17,6 +17,7 @@
   @include desktop-header;
   margin-bottom: 43px;
   color: $white;
+  align-self: flex-start;
 }
 
 .order input {
@@ -60,7 +61,7 @@
 .order__button {
   border: 3px solid $white;
   background-color: $dark-blue;
-  width: 410px;
+  width: 413px;
   height: 52px;
   color: $white;
   box-sizing: border-box;
@@ -81,8 +82,10 @@
 
 @media (max-width: $tablet-width) {
   .order-wrapper {
-    width: 768px;
-    padding: 70px 21.4% 70px 17.3%;
+    width: 472px;
+    padding: 70px 39px 70px 9px;
+    margin: 0 auto;
+    align-items: flex-start;
   }
 
   .order h2 {
@@ -91,13 +94,17 @@
     color: $white;
   }
 
+  .order__inputs {
+    width: 100%;
+  }
+
   .order input {
     width: 206px;
     padding: 3px 0;
     border-bottom: 2px solid #74819c;
   }
 
-  .order input:first-child {
+  .order input:first-of-type {
     margin-right: 59px;
   }
 
@@ -111,6 +118,7 @@
   .order-wrapper {
     width: 320px;
     padding: 70px 15px 70px 15px;
+    box-sizing: border-box;
     margin: 0 auto;
   }
 
