@@ -6,28 +6,32 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 105px;
+  padding-bottom: 121px;
 }
 
 .feedback__list {
+  @include list-reset;
   width: 562px;
-  box-sizing: border-box;
-  padding-left: 64px;
-  padding-top: 53px;
-  padding-right: 63px;
-  padding-bottom: 57px;
-  background-color: #1c3374;
+  height: auto;
 }
 
 .feedback__item {
   display: flex;
   flex-wrap: wrap;
+  background-color: #1c3374;
+  width: 562px;
+  height: auto;
+  box-sizing: border-box;
+  padding-left: 64px;
+  padding-top: 53px;
+  padding-right: 63px;
+  padding-bottom: 57px;
 }
 
 .feedback h2 {
   @include desktop-header;
   text-align: center;
-  margin-bottom: 36px;
+  margin-bottom: 53px;
 }
 
 .feedback__name {
@@ -84,6 +88,7 @@
   &:hover,
   &:focus {
     background-image: url("../img/icon-prev-crimson.svg");
+    outline: none;
   }
 }
 
@@ -95,6 +100,7 @@
   &:hover,
   &:focus {
     background-image: url("../img/icon-prev-crimson.svg");
+    outline: none;
   }
 }
 
@@ -102,7 +108,30 @@
   .feedback {
     margin-bottom: 0;
     padding-top: 43px;
-    padding-bottom: 85px;
+    padding-bottom: 101px;
+  }
+
+  .feedback__avatar {
+    width: 80px;
+    height: 80px;
+    display: block;
+  }
+
+  .feedback__author {
+    height: 80px;
+  }
+
+  .feedback__name {
+    display: block;
+    height: 88px;
+  }
+
+  .feedback-slider {
+    width: 566px;
+  }
+
+  .feedback-list {
+    width: 566px;
   }
 
   .feedback-item {
@@ -113,9 +142,14 @@
     padding-bottom: 57px;
   }
 
+  .feedback-item p {
+    margin-top: -93px;
+    margin-right: 108px;
+  }
+
   .feedback h2 {
     @include tablet-header;
-    margin-bottom: 25px;
+    margin-bottom: 40px;
   }
 
   .feedback__switch--prev {
@@ -132,29 +166,29 @@
     position: relative;
     width: 320px;
     margin: 0 auto;
-    padding: 20px 15px 55px 15px;
+    padding: 20px 15px 69px 15px;
     box-sizing: border-box;
+  }
+
+  .feedback-slider {
+    width: 226px;
   }
 
   .feedback__list {
     width: 226px;
-    padding: 40px 25px;
-    padding-bottom: 36px;
-    box-sizing: border-box;
   }
 
   .feedback__item {
-    // width: 226px;
-    // padding: 40px 25px;
-    // padding-bottom: 36px;
+    width: 226px;
+    padding: 40px 25px;
+    padding-bottom: 36px;
     flex-direction: row;
     align-items: center;
-    // box-sizing: border-box;
   }
 
   .feedback h2 {
     @include mobile-header;
-    margin-bottom: 26px;
+    margin-bottom: 40px;
   }
 
   .feedback__name {
@@ -166,8 +200,10 @@
   }
 
   .feedback__item p {
+    width: auto;
     margin: 0;
     text-align: center;
+    margin-top: -12px;
   }
 
   .feedback__author {

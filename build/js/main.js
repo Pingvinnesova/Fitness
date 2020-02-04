@@ -1,5 +1,45 @@
 'use strict';
 
+// input
+
+var input = document.querySelector('#order__tel');
+
+if (input) {
+  window.addEventListener('DOMContentLoaded', function () {
+    function setCursorPosition(pos, elem) {
+      elem.focus();
+      if (elem.setSelectionRange) {
+        elem.setSelectionRange(pos, pos);
+      } else if (elem.createTextRange) {
+        var range = elem.createTextRange();
+        range.collapse(true);
+        range.moveEnd('character', pos);
+        range.moveStart('character', pos);
+        range.select();
+      }
+    }
+
+    function mask(event) {
+      var matrix = '+7 (___) ___ ____',
+        i = 0,
+        def = matrix.replace(/\D/g, ''),
+        val = this.value.replace(/\D/g, '');
+      if (def.length >= val.length) val = def;
+      this.value = matrix.replace(/./g, function(a) {
+        return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? '' : a;
+      });
+      if (event.type === 'blur') {
+        if (this.value.length === 2) this.value = '';
+      } else setCursorPosition(this.value.length, this);
+    }
+    input.addEventListener('input', mask, false);
+    input.addEventListener('focus', mask, false);
+    input.addEventListener('blur', mask, false);
+  });
+}
+
+// якорь
+
 var anchor = document.querySelector('.scroll-to');
 
 if (anchor) {
@@ -12,48 +52,47 @@ if (anchor) {
     });
   });
 }
-// trainers-slider
 
-$(document).ready(function () {
-  $('.trainers__list').slick({
-    infinite: false,
-    speed: 350,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    nextArrow: document.querySelector('.trainers__switch--next'),
-    prevArrow: document.querySelector('.trainers__switch--prev'),
-    responsive: [
-      {
-        breakpoint: 1201,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
-        }
-      },
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
-  });
+var mySwiperTrainers = new Swiper('.trainers__slider', {
+  navigation: {
+    nextEl: '.trainers__switch--next',
+    prevEl: '.trainers__switch--prev',
+  },
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 30,
+    },
+    768: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 30
+    },
+    1200: {
+      slidesPerView: 4,
+      slidesPerGroup: 4,
+      spaceBetween: 40,
+    },
+  }
 });
 
 // feedback-slider
 
-$(document).ready(function () {
-  $('.feedback__list').slick({
-    infinite: false,
-    speed: 350,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    nextArrow: document.querySelector('.feedback__switch--next'),
-    prevArrow: document.querySelector('.feedback__switch--prev'),
-  });
+var mySwiperFeedback = new Swiper('.feedback-slider', {
+  slidesPerView: 1,
+  slidesPerGroup: 1,
+  navigation: {
+    nextEl: '.feedback__switch--next',
+    prevEl: '.feedback__switch--prev',
+  },
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
 });
-
 
 // footer
 
@@ -87,7 +126,6 @@ window.addEventListener('resize', function () {
 
 // focus
 
-
 var membershipItem = document.querySelector('.membership__item');
 var membershipButton = document.querySelector('.membership__button');
 var membershipItemActive = document.querySelector('.membership__item--active');
@@ -103,13 +141,6 @@ if (membershipItem || membershipButton) {
   }, true);
 }
 
-// if (membershipLink) {
-//   membershipLink.addEventListener('focus', function (e) {
-//     e.preventDefault();
-//     membershipLinkActive.classList.remove('membership__link--active');
-//   }, true);
-// }
-
 if (membershipItem || membershipButton) {
   membershipItem.addEventListener('click', function (e) {
     e.preventDefault();
@@ -118,62 +149,8 @@ if (membershipItem || membershipButton) {
   }, true);
 }
 
-
 // membership__active-link
 
 if (membershipLink) {
   membershipLinkActive.focus();
-}
-
-//   membershipLink.addEventListener('click', function (e) {
-//     console.log('тык');
-//     e.preventDefault();
-//     membershipLinkActive.classList.remove('membership__link--active');
-//     // membershipLink.classList.add('membership__link--active');
-//   }, true);
-
-//   membershipLink.addEventListener('focus', function (e) {
-//     console.log('focus');
-//     e.preventDefault();
-//     membershipLinkActive.classList.remove('membership__link--active');
-//     // membershipLink.classList.add('membership__link--active');
-//   }, true);
-
-
-// lazy
-
-var blazy = new Blazy({
-  selector: 'img' || '.b-lazy',
-  breakpoints:[{
-    width: 1199,
-    src: 'data-tablet-src'
-  },
-  {
-    width: 767,
-    src: 'data-mobile-src'
-  }]
-});
-
-// input
-
-var orderTel = document.getElementById('order__tel');
-
-if (orderTel) {
-  orderTel.onkeydown = function (e) {
-      return !(/^[А-Яа-яA-Za-z ]$/.test(e.key));
-  }
-}
-
-if (orderTel) {
-orderTel.addEventListener('invalid', function () {
-  if (orderTel.validity.tooShort) {
-    orderTel.setCustomValidity('Телефон должен состоять минимум из 8-ми символов');
-  } else if (orderTelt.validity.tooLong) {
-    orderTel.setCustomValidity('Телефон не должен превышать 15-ть символов');
-  } else if (orderTel.validity.valueMissing) {
-    orderTel.setCustomValidity('Обязательное поле');
-  } else {
-    orderTel.setCustomValidity('');
-  }
-});
 }

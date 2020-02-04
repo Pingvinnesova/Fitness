@@ -93,9 +93,14 @@
 }
 
 @media (max-width: $mobile-width) {
+  .footer {
+    max-width: 100%;
+    min-width: 320px;
+  }
+
   .footer__container {
     width: 320px;
-    padding: 47px 15px;
+    padding: 49px 15px;
     flex-direction: column;
     align-items: flex-start;
   }

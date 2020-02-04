@@ -94,7 +94,7 @@
   background-color: $crimson;
   background-image: url("../img/girl-desktop@1x.jpg");
   background-repeat: no-repeat;
-  background-size: 280px 462px;
+  background-size: 280px 100%;
   background-position: right 0 top 0;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
