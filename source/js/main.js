@@ -17,10 +17,50 @@ if (anchor) {
 
 // sliderTrainers
 
-window.swiper(document.querySelector('.trainers__slider'), {
+// window.swiper(document.querySelector('.trainers__slider'), {
+//   navigation: {
+//     nextEl: '.trainers__switch--next',
+//     prevEl: '.trainers__switch--prev',
+//   },
+//   breakpoints: {
+//     320: {
+//       slidesPerView: 1,
+//       slidesPerGroup: 1,
+//       spaceBetween: 30,
+//     },
+//     768: {
+//       slidesPerView: 2,
+//       slidesPerGroup: 2,
+//       spaceBetween: 30
+//     },
+//     1200: {
+//       slidesPerView: 4,
+//       slidesPerGroup: 4,
+//       spaceBetween: 40,
+//     },
+//   }
+// });
+
+// // sliderFeedback
+
+// window.swiper(document.querySelector('.feedback__slider'), {
+//   slidesPerView: 1,
+//   slidesPerGroup: 1,
+//   navigation: {
+//     nextEl: '.feedback__switch--next',
+//     prevEl: '.feedback__switch--prev',
+//   },
+// });
+
+// sliderTrainers
+
+var mySwiperTrainers = new Swiper('.trainers__slider', {
   navigation: {
     nextEl: '.trainers__switch--next',
     prevEl: '.trainers__switch--prev',
+  },
+  scrollbar: {
+    el: '.swiper-scrollbar',
   },
   breakpoints: {
     320: {
@@ -43,57 +83,17 @@ window.swiper(document.querySelector('.trainers__slider'), {
 
 // sliderFeedback
 
-window.swiper(document.querySelector('.feedback__slider'), {
+var mySwiperFeedback = new Swiper('.feedback-slider', {
   slidesPerView: 1,
   slidesPerGroup: 1,
   navigation: {
     nextEl: '.feedback__switch--next',
     prevEl: '.feedback__switch--prev',
   },
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
 });
-
-// sliderTrainers
-
-// var mySwiperTrainers = new Swiper('.trainers__slider', {
-//   navigation: {
-//     nextEl: '.trainers__switch--next',
-//     prevEl: '.trainers__switch--prev',
-//   },
-//   scrollbar: {
-//     el: '.swiper-scrollbar',
-//   },
-//   breakpoints: {
-//     320: {
-//       slidesPerView: 1,
-//       slidesPerGroup: 1,
-//       spaceBetween: 30,
-//     },
-//     768: {
-//       slidesPerView: 2,
-//       slidesPerGroup: 2,
-//       spaceBetween: 30
-//     },
-//     1200: {
-//       slidesPerView: 4,
-//       slidesPerGroup: 4,
-//       spaceBetween: 40,
-//     },
-//   }
-// });
-
-// sliderFeedback
-
-// var mySwiperFeedback = new Swiper('.feedback-slider', {
-//   slidesPerView: 1,
-//   slidesPerGroup: 1,
-//   navigation: {
-//     nextEl: '.feedback__switch--next',
-//     prevEl: '.feedback__switch--prev',
-//   },
-//   scrollbar: {
-//     el: '.swiper-scrollbar',
-//   },
-// });
 
 // footer
 

@@ -39,6 +39,9 @@
     "IE 11",
     "Firefox ESR"
   ],
+  "esLintIgnore": [
+    "js/vendor.js"
+  ],
   "editorconfig-cli": [
     "*.json",
     "*.js",
