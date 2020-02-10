@@ -40,7 +40,7 @@
     "Firefox ESR"
   ],
   "esLintIgnore": [
-    "js/vendor.js"
+    "js/"
   ],
   "editorconfig-cli": [
     "*.json",
